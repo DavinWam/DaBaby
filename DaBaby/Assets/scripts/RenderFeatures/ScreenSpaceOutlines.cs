@@ -147,7 +147,6 @@ public class ScreenSpaceOutlines : ScriptableRendererFeature
     [SerializeField] private RenderPassEvent renderPassEvent;
     [SerializeField] private Shader viewSpaceNormalShader;
     [SerializeField] private Shader outlineShader;
-    [SerializeField] private Shader outlineOccluderShader;
     public RenderTexture temp;
 
     private ViewSpaceNormalsTexturePass viewSpaceNormalsTexturePass;

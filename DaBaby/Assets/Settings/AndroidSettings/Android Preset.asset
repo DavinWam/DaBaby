@@ -20,10 +20,9 @@ MonoBehaviour:
   outlinesLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  renderPassEvent: 350
+  renderPassEvent: 400
   viewSpaceNormalShader: {fileID: -6465566751694194690, guid: 779c48e99a3ca6a49a3d46cb4acb43ba, type: 3}
   outlineShader: {fileID: -6465566751694194690, guid: 88bea57077107cb49afddc9203273be3, type: 3}
-  outlineOccluderShader: {fileID: 0}
   temp: {fileID: 8400000, guid: 9aaeb85777ab2cd489e4e07a19ce2741, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
