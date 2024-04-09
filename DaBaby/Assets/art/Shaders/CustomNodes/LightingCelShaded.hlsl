@@ -38,6 +38,7 @@ struct EdgeContstants
         //diffuse
         float diffuse = saturate(dot(s.normals, l.direction));
         diffuse *= attenuation;
+        //return l.shadowAttenuation * diffuse;
 
         //specular(bling-phong reflection)
         float3 h = normalize(l.direction + s.view);
@@ -50,7 +51,6 @@ struct EdgeContstants
         //rim reflection
         float rim = 1 - dot(s.view, s.normals);
         rim *= pow(diffuse, s.rimThreshold);
-        
 
         //smoothing values
         diffuse = smoothstep(0,s.ec.diffuse,diffuse);
@@ -58,9 +58,10 @@ struct EdgeContstants
             s.ec.specular+s.ec.specularOffset, specular);
         rim = s.smoothness * smoothstep(s.ec.rim -.5f * s.ec.rimOffset,s.ec.rim + .5f * s.ec.rimOffset, rim );
 
+
+    
         
-        
-        return s.baseColor * l.color * diffuse + l.color * max(specular, rim);
+        return s.baseColor * l.color * diffuse + l.color * max(specular, rim * s.baseColor);
 
     }
 #endif

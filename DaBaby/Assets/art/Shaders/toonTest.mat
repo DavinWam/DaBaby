@@ -45,6 +45,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_0cb4e26148c74e33a6486abb853cc1f8_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 45b5d63d71b30c747b2dd0d18adf6679, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ToonRamp:
         m_Texture: {fileID: 2800000, guid: 3f3a5c67d62707c42b8676040cf6abad, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -71,13 +75,14 @@ Material:
     - _BOOLEAN_2: 0
     - _Brightness: 1
     - _DarkBalance: 0.5
-    - _EdgeDiffuse: 0.01
-    - _EdgeDistanceAttenuation: 1
-    - _EdgeRim: 0.637
-    - _EdgeRimOffset: 0.34
-    - _EdgeShadowAttenuation: 5
-    - _EdgeSpecular: 0.01
-    - _EdgeSpecularOffset: 0
+    - _EdgeDiffuse: 0.1401
+    - _EdgeDistanceAttenuation: 0
+    - _EdgeRim: 0.53
+    - _EdgeRimOffset: 0.15
+    - _EdgeShadowAttenuation: 0
+    - _EdgeSpecular: 0.482
+    - _EdgeSpecularOffset: 0.0054
+    - _Exposure: 1
     - _Float: 0
     - _Float_1: 0
     - _Float_2: 0
@@ -92,11 +97,11 @@ Material:
     - _SHADOWS_SOFT: 1
     - _SOFT_SHADOWS: 1
     - _rimThreshHold: 0.1
-    - _shininess: 0.596
+    - _shininess: 0.388
     - _smoothness: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 0}
     - _Vector3: {r: 8, g: 8, b: 8, a: 0}
   m_BuildTextureStacks: []

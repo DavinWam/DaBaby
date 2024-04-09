@@ -166,9 +166,6 @@
             "m_Id": "3a05bab31c91447bbc7ad189a5b0620f"
         },
         {
-            "m_Id": "f1f2e1c1e505472f9da88641505e34ba"
-        },
-        {
             "m_Id": "d40644a5902d415a8b68947b36c17429"
         },
         {
@@ -572,8 +569,8 @@
     ],
     "m_VertexContext": {
         "m_Position": {
-            "x": 762.6666870117188,
-            "y": 454.6667175292969
+            "x": 97.33329772949219,
+            "y": 266.0000305175781
         },
         "m_Blocks": [
             {
@@ -589,8 +586,8 @@
     },
     "m_FragmentContext": {
         "m_Position": {
-            "x": 762.6666870117188,
-            "y": 654.6666870117188
+            "x": 97.33329772949219,
+            "y": 466.0
         },
         "m_Blocks": [
             {
@@ -975,7 +972,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "1c54cdb22b5f40fbb1604426be569927",
     "m_Id": 0,
-    "m_DisplayName": "DarkBalance",
+    "m_DisplayName": "Brightness",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1870,7 +1867,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "696d99da0784443eb9d04eb743662f74",
     "m_Id": 0,
-    "m_DisplayName": "Brightness",
+    "m_DisplayName": "Exposure",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -2046,10 +2043,10 @@
     "m_Guid": {
         "m_GuidSerialized": "6140cd3e-82b3-400f-85ee-73499f33dc64"
     },
-    "m_Name": "Brightness",
+    "m_Name": "Exposure",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Brightness",
-    "m_DefaultReferenceName": "_Brightness",
+    "m_RefNameGeneratedByDisplayName": "Exposure",
+    "m_DefaultReferenceName": "_Exposure",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -2625,9 +2622,9 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 1.0,
-        "g": 1.0,
-        "b": 1.0,
+        "r": 0.15616463124752046,
+        "g": 0.6938691139221191,
+        "b": 0.8867924213409424,
         "a": 1.0
     },
     "isMainColor": false,
@@ -3595,10 +3592,10 @@
     "m_Guid": {
         "m_GuidSerialized": "f4ee26b2-30f3-4db3-9dd6-de681cfd8b76"
     },
-    "m_Name": "DarkBalance",
+    "m_Name": "Brightness",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "DarkBalance",
-    "m_DefaultReferenceName": "_DarkBalance",
+    "m_RefNameGeneratedByDisplayName": "Brightness",
+    "m_DefaultReferenceName": "_Brightness",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -3718,17 +3715,6 @@
     },
     "m_Labels": [],
     "m_Space": 0
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.GroupData",
-    "m_ObjectId": "f1f2e1c1e505472f9da88641505e34ba",
-    "m_Title": "New Group",
-    "m_Position": {
-        "x": 773.6586303710938,
-        "y": 464.66644287109377
-    }
 }
 
 {
