@@ -41,7 +41,7 @@ public class ScreenSpaceOutlines : ScriptableRendererFeature
 
             filteringSettings = new FilteringSettings(RenderQueueRange.opaque, outlineLayerMask);
             // Assuming outlineLayerMask is the layer you want to exclude
-            LayerMask invertedMask = -outlineLayerMask;
+            LayerMask invertedMask = ~outlineLayerMask;
 
             occluderFilteringSettings = new FilteringSettings(RenderQueueRange.opaque, invertedMask);
         }

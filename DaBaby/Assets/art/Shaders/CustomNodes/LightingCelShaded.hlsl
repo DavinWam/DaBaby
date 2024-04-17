@@ -34,13 +34,12 @@ struct EdgeContstants
         
 
         float attenuation = shadowAttenuationSmooth * distanceAttenuationSmooth;
-        
         //diffuse
         float diffuse = saturate(dot(s.normals, l.direction));
         diffuse *= attenuation;
         //return l.shadowAttenuation * diffuse;
 
-        //specular(bling-phong reflection)
+        //specular(blinn-phong reflection)
         float3 h = normalize(l.direction + s.view);
         float specular = saturate(dot(s.normals, h));
         specular = pow(specular, s.shininess);
