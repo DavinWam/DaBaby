@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: toonTest
+  m_Name: HardSurfaceMatt
   m_Shader: {fileID: -6465566751694194690, guid: e83c66dd082ce0143856d5551f6ffdad, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -42,7 +42,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _DiffuseText:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 8685512c7856ffd40a4ad1859a7cb52c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_0cb4e26148c74e33a6486abb853cc1f8_Texture_1_Texture2D:
@@ -77,10 +77,10 @@ Material:
     - _DarkBalance: 0.5
     - _EdgeDiffuse: 0.01
     - _EdgeDistanceAttenuation: 0
-    - _EdgeRim: 0.691
+    - _EdgeRim: 1
     - _EdgeRimOffset: 0
-    - _EdgeShadowAttenuation: 1.52
-    - _EdgeSpecular: 0.01
+    - _EdgeShadowAttenuation: 0
+    - _EdgeSpecular: 0.064
     - _EdgeSpecularOffset: 0.1
     - _Exposure: 1
     - _Float: 0
@@ -97,12 +97,12 @@ Material:
     - _SHADOWS_SOFT: 1
     - _SOFT_SHADOWS: 1
     - _rimThreshHold: 0.1
-    - _shininess: 0.208
-    - _smoothness: 0.37
-    - _specularSize: 0.81
+    - _shininess: 0.081
+    - _smoothness: 1.08
+    - _specularSize: 0.581
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.8773585, g: 0.7506318, b: 0.59318256, a: 1}
+    - _Color: {r: 0.07570903, g: 0.082615726, b: 0.20754719, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 0}
     - _Vector3: {r: 8, g: 8, b: 8, a: 0}
   m_BuildTextureStacks: []

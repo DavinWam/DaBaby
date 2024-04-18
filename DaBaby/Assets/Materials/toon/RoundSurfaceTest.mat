@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: toonTest 1
+  m_Name: RoundSurfaceTest
   m_Shader: {fileID: -6465566751694194690, guid: e83c66dd082ce0143856d5551f6ffdad, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -77,10 +77,10 @@ Material:
     - _DarkBalance: 0.5
     - _EdgeDiffuse: 0.01
     - _EdgeDistanceAttenuation: 0
-    - _EdgeRim: 1
+    - _EdgeRim: 0.691
     - _EdgeRimOffset: 0
     - _EdgeShadowAttenuation: 0
-    - _EdgeSpecular: 0.064
+    - _EdgeSpecular: 0.01
     - _EdgeSpecularOffset: 0.1
     - _Exposure: 1
     - _Float: 0
@@ -97,12 +97,12 @@ Material:
     - _SHADOWS_SOFT: 1
     - _SOFT_SHADOWS: 1
     - _rimThreshHold: 0.1
-    - _shininess: 0.081
-    - _smoothness: 0.43
-    - _specularSize: 0.889
+    - _shininess: 0.208
+    - _smoothness: 0.37
+    - _specularSize: 0.81
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.7924528, g: 0.4342207, b: 0, a: 1}
+    - _Color: {r: 0.8773585, g: 0.7506318, b: 0.59318256, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 0}
     - _Vector3: {r: 8, g: 8, b: 8, a: 0}
   m_BuildTextureStacks: []

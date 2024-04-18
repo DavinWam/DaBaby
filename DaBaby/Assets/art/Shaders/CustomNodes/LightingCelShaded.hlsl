@@ -1,7 +1,19 @@
 #ifndef LightingCelShaded
 #define LightingCelShaded
 
+#pragma multi_compile _ _MAIN_LIGHT_SHADOWS
+#pragma multi_compile _ _MAIN_LIGHT_SHADOWS_CASCADE
+ 
+#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Lighting.hlsl"
 #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/RealtimeLights.hlsl"
+#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Shadows.hlsl"
+
+
+
+TEXTURE2D(_ShadowMapTexture);
+SAMPLER(sampler_ShadowMapTexture);
+
 
 #ifndef SHADERGRAPH_PREVIEW
 struct EdgeContstants
@@ -25,19 +37,19 @@ struct EdgeContstants
     EdgeContstants ec;
     float3 baseColor;
     float3 shadowColor;
+    float4 shadowCoord;
 };
     
     float3 CalculateCelShading(Light l, SurfaceVariables s)
     {
+
         float shadowAttenuationSmooth = smoothstep(0,s.ec.shadowAttenuation,l.shadowAttenuation);
         float distanceAttenuationSmooth = smoothstep(0,s.ec.distanceAttenuation,l.distanceAttenuation);
         
-
         float attenuation = shadowAttenuationSmooth * distanceAttenuationSmooth;
         //diffuse
         float diffuse = saturate(dot(s.normals, l.direction));
         diffuse *= attenuation;
-        //return l.shadowAttenuation * diffuse;
 
         //specular(blinn-phong reflection)
         float3 h = normalize(l.direction + s.view);
@@ -95,13 +107,13 @@ void LightingCelShaded_float(float Smooothness, float Shininess, float3 Position
         //shadowing based on position
         #if SHADOWS_SCREEN
             float4 clipPos = TransformWorldToHClip(Position);
-            float4 shadowCoord = ComputeScreenPos(clipPos);
+            s.shadowCoord = ComputeScreenPos(clipPos);
         #else
-            float4 shadowCoord = TransformWorldToShadowCoord(Position);
+            s.shadowCoord = TransformWorldToShadowCoord(Position);
         #endif
        
        //mainlight
-        Light light = GetMainLight(shadowCoord);
+        Light light = GetMainLight(s.shadowCoord);
        Color = CalculateCelShading(light, s);
 
        //other scene lights
