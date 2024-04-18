@@ -14,6 +14,7 @@
 TEXTURE2D(_ShadowMapTexture);
 SAMPLER(sampler_ShadowMapTexture);
 
+float3 accumulatedDiffuse;
 
 #ifndef SHADERGRAPH_PREVIEW
 struct EdgeContstants
@@ -51,6 +52,7 @@ struct EdgeContstants
         float diffuse = saturate(dot(s.normals, l.direction));
         diffuse *= attenuation;
 
+
         //specular(blinn-phong reflection)
         float3 h = normalize(l.direction + s.view);
         float specular = saturate(dot(s.normals, h));
@@ -68,10 +70,12 @@ struct EdgeContstants
         specular = s.smoothness * smoothstep((1-s.smoothness)*s.ec.specular+s.ec.specularOffset, 
             s.ec.specular+s.ec.specularOffset, specular);
         rim = s.smoothness * smoothstep(s.ec.rim -.5f * s.ec.rimOffset,s.ec.rim + .5f * s.ec.rimOffset, rim );
-
-
-    
         
+        float3 diffuseColor = lerp(s.shadowColor, s.baseColor, diffuse);
+
+        accumulatedDiffuse += diffuse* l.color;
+
+        //return l.color * diffuseColor + l.color * max(specular, rim * s.baseColor);
         return s.baseColor * l.color * diffuse + l.color * max(specular, rim * s.baseColor);
 
     }
@@ -126,6 +130,12 @@ void LightingCelShaded_float(float Smooothness, float Shininess, float3 Position
         light = GetAdditionalLight(i,Position,1);
         Color += CalculateCelShading(light, s);
        }
+       accumulatedDiffuse = clamp(accumulatedDiffuse, 0.0, 1.0);
+       //Color = accumulatedDiffuse;
+
+       float3 diffuseColor = lerp(ShadowColor, Color, accumulatedDiffuse);
+       Color = diffuseColor;
+
     #endif 
 }
 

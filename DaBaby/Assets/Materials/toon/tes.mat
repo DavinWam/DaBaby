@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HardSurface
+  m_Name: tes
   m_Shader: {fileID: -6465566751694194690, guid: e83c66dd082ce0143856d5551f6ffdad, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -80,8 +80,8 @@ Material:
     - _EdgeRim: 1
     - _EdgeRimOffset: 0
     - _EdgeShadowAttenuation: 0
-    - _EdgeSpecular: 0.647
-    - _EdgeSpecularOffset: 0
+    - _EdgeSpecular: 0.064
+    - _EdgeSpecularOffset: 0.1
     - _Exposure: 1
     - _Float: 0
     - _Float_1: 0
@@ -98,11 +98,11 @@ Material:
     - _SOFT_SHADOWS: 1
     - _rimThreshHold: 0.1
     - _shininess: 0.081
-    - _smoothness: 0.84
-    - _specularSize: 0.9
+    - _smoothness: 1.03
+    - _specularSize: 0.57
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.3773585, g: 0.2036538, b: 0, a: 1}
+    - _Color: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 0}
     - _Vector3: {r: 8, g: 8, b: 8, a: 0}
   m_BuildTextureStacks: []
