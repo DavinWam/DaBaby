@@ -145,9 +145,9 @@ public class RecursiveHullObject : MonoBehaviour, IHullObject
         float maxDimension = Mathf.Max(scaledBoundsSize.x, Mathf.Max(scaledBoundsSize.y, scaledBoundsSize.z));
 
         // Adjust scale factors based on the scaled bounds of the object
-        float scaleX = 1 + ((thickness - 1) / (scaledBoundsSize.x ));
-        float scaleY = 1 + ((thickness - 1) / (scaledBoundsSize.y ));
-        float scaleZ = 1 + ((thickness - 1) / (scaledBoundsSize.z ));
+        float scaleX = 1 + ((thickness - 1) / Mathf.Max(scaledBoundsSize.x, 0.000001f ));
+        float scaleY = 1 + ((thickness - 1) / Mathf.Max(scaledBoundsSize.y, 0.000001f ));
+        float scaleZ = 1 + ((thickness - 1) / Mathf.Max(scaledBoundsSize.z, 0.000001f ));
 
         return new Vector3(scaleX, scaleY, scaleZ);
     }

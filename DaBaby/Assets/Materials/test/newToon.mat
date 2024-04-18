@@ -75,9 +75,9 @@ Material:
     - _BOOLEAN_2: 0
     - _Brightness: 1
     - _DarkBalance: 0.5
-    - _EdgeDiffuse: 0.407
-    - _EdgeDistanceAttenuation: 1.23
-    - _EdgeRim: 0.691
+    - _EdgeDiffuse: 0.01
+    - _EdgeDistanceAttenuation: 0
+    - _EdgeRim: 0.688
     - _EdgeRimOffset: 0
     - _EdgeShadowAttenuation: 0
     - _EdgeSpecular: 0.01
@@ -102,8 +102,8 @@ Material:
     - _specularSize: 0.81
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.8773585, g: 0.7506318, b: 0.59318256, a: 1}
+    - _Color: {r: 0.9528302, g: 0.752364, b: 0.50937456, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 0}
     - _Vector3: {r: 8, g: 8, b: 8, a: 0}
-    - _shadowColor: {r: 0.5, g: 0, b: 0, a: 0}
+    - _shadowColor: {r: 0.7169812, g: 0.34947193, b: 0.7018485, a: 1}
   m_BuildTextureStacks: []
