@@ -57,6 +57,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _DiffuseText:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -99,6 +103,7 @@ Material:
     - _AlphaToMask: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
+    - _Brightness: 0.5
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
@@ -108,7 +113,15 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
+    - _EdgeDiffuse: 0.02
+    - _EdgeDistanceAttenuation: 1
+    - _EdgeRim: 0.7
+    - _EdgeRimOffset: 0
+    - _EdgeShadowAttenuation: 5
+    - _EdgeSpecular: 0.01
+    - _EdgeSpecularOffset: 0.01
     - _EnvironmentReflections: 1
+    - _Exposure: 1
     - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossyReflections: 1
@@ -116,6 +129,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _Smoothness: 0
@@ -127,9 +141,13 @@ Material:
     - _UVSec: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
+    - _rimThreshHold: 0
+    - _smoothness: 1.5
+    - _specularSize: 1
     m_Colors:
     - _BaseColor: {r: 0.65544164, g: 0.59679085, b: 0.68433243, a: 1}
     - _Color: {r: 0.6554416, g: 0.59679085, b: 0.68433243, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _shadowColor: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
