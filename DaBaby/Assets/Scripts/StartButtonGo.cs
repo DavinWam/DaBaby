@@ -9,4 +9,10 @@ public class StartButtonGo : MonoBehaviour
     {
         SceneManager.LoadScene("Main");
     }
+
+    public void ReturntoMenu()
+    {
+        SceneManager.LoadScene("StartMenu");
+    }
+
 }
