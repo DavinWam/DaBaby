@@ -3,7 +3,27 @@ guid: 1c518e8cd1f720745a4c5c7199b254ec
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: black
+    second: {fileID: 2100000, guid: 6bc3d05f56eee494ebe52eb7ee13e93d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blueLight
+    second: {fileID: 2100000, guid: 7a23153598c321049b6b3e94cbf3b374, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gray
+    second: {fileID: 2100000, guid: 63ed8e816173f0d45aa3df3f894da68a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ipad
+    second: {fileID: 2100000, guid: ae913e0ad0014d148b2db0b512922bbc, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
