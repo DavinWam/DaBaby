@@ -346,18 +346,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 4737362031991458706}
     m_Modifications:
     - target: {fileID: 4231256120525473678, guid: 7982194d37a15804c84abcef4521552b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5434971
-      objectReference: {fileID: 0}
-    - target: {fileID: 4231256120525473678, guid: 7982194d37a15804c84abcef4521552b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.84747964
-      objectReference: {fileID: 0}
-    - target: {fileID: 4231256120525473678, guid: 7982194d37a15804c84abcef4521552b, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.7400844
-      objectReference: {fileID: 0}
-    - target: {fileID: 4231256120525473678, guid: 7982194d37a15804c84abcef4521552b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.165681
       objectReference: {fileID: 0}
@@ -494,14 +482,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 4737362031991458706}
     m_Modifications:
     - target: {fileID: 508702975721357976, guid: 990881a0a986a7b48bb6b3f8917543eb, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.84747964
-      objectReference: {fileID: 0}
-    - target: {fileID: 508702975721357976, guid: 990881a0a986a7b48bb6b3f8917543eb, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.7400843
-      objectReference: {fileID: 0}
-    - target: {fileID: 508702975721357976, guid: 990881a0a986a7b48bb6b3f8917543eb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.009998
       objectReference: {fileID: 0}
@@ -545,10 +525,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: KitchenTopDrawerPink
       objectReference: {fileID: 0}
-    - target: {fileID: 6902873324927701073, guid: 990881a0a986a7b48bb6b3f8917543eb, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f8eb537aa8e19724ea3c9ecdc78cf7f3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -567,14 +543,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4737362031991458706}
     m_Modifications:
-    - target: {fileID: 508702975721357976, guid: 990881a0a986a7b48bb6b3f8917543eb, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.84747964
-      objectReference: {fileID: 0}
-    - target: {fileID: 508702975721357976, guid: 990881a0a986a7b48bb6b3f8917543eb, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.7400843
-      objectReference: {fileID: 0}
     - target: {fileID: 508702975721357976, guid: 990881a0a986a7b48bb6b3f8917543eb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.009998
@@ -619,10 +587,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: KitchenTopDrawerPink
       objectReference: {fileID: 0}
-    - target: {fileID: 6902873324927701073, guid: 990881a0a986a7b48bb6b3f8917543eb, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: f8eb537aa8e19724ea3c9ecdc78cf7f3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

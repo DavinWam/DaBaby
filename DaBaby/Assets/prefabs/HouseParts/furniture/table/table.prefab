@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4790418699148270229}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3281232495529699436}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.985384, y: 0.28601322, z: -0.14300948}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 6314083997658223994}
   - component: {fileID: 3075050705476173138}
   - component: {fileID: 6241484739716342777}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: tableTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -133,7 +133,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3f9623be0da8c834a9a729c4ca8654cd, type: 2}
+  - {fileID: 2100000, guid: 5042d3e4134641647a64e46d6240cb10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -229,6 +229,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tableLeg
       objectReference: {fileID: 0}
+    - target: {fileID: 209301442066039257, guid: 132550b343d4a034d937d49198ca3103, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7853510861329947963, guid: 132550b343d4a034d937d49198ca3103, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.17919327
@@ -299,6 +303,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4790418699148270229}
     m_Modifications:
+    - target: {fileID: 966046601311462661, guid: 5e2f12c7d3e029943a3dcf2a4030b87c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5042d3e4134641647a64e46d6240cb10, type: 2}
     - target: {fileID: 5595427430940841270, guid: 5e2f12c7d3e029943a3dcf2a4030b87c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.21091303
@@ -561,6 +569,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tableSide
       objectReference: {fileID: 0}
+    - target: {fileID: 6765241313633576746, guid: 5e2f12c7d3e029943a3dcf2a4030b87c, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -582,18 +594,6 @@ PrefabInstance:
     - target: {fileID: 209301442066039257, guid: 132550b343d4a034d937d49198ca3103, type: 3}
       propertyPath: m_Name
       value: tableLeg
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853510861329947963, guid: 132550b343d4a034d937d49198ca3103, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.17919327
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853510861329947963, guid: 132550b343d4a034d937d49198ca3103, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.03783298
-      objectReference: {fileID: 0}
-    - target: {fileID: 7853510861329947963, guid: 132550b343d4a034d937d49198ca3103, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.0066446103
       objectReference: {fileID: 0}
     - target: {fileID: 7853510861329947963, guid: 132550b343d4a034d937d49198ca3103, type: 3}
       propertyPath: m_LocalPosition.x

@@ -462,6 +462,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1849100949318851195}
     m_Modifications:
+    - target: {fileID: 426853684954061156, guid: 2d5c60610fa484f4398e384d191de8a9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5042d3e4134641647a64e46d6240cb10, type: 2}
     - target: {fileID: 7334879578347568207, guid: 2d5c60610fa484f4398e384d191de8a9, type: 3}
       propertyPath: m_Name
       value: outerDoor
