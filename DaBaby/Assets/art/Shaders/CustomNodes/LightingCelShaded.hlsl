@@ -76,7 +76,7 @@ struct EdgeContstants
         accumulatedDiffuse += diffuse* l.color;
 
         //return l.color * diffuseColor + l.color * max(specular, rim * s.baseColor);
-        return s.baseColor * l.color * diffuse + l.color * max(specular, rim * s.baseColor);
+        return s.baseColor * l.color * diffuse + lerp(s.baseColor, l.color, max(specular, rim ));
 
     }
 #endif

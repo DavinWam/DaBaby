@@ -61,8 +61,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c89ec22fe807d224bb05d771b869826f, type: 2}
-  - {fileID: 2100000, guid: b89173d97892e934994d2af2eb9a3083, type: 2}
+  - {fileID: 2100000, guid: d716fbf9a0166dc42873af0b82e3697f, type: 2}
+  - {fileID: 2100000, guid: 892c36dafde11f543a31a33237102b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -187,7 +187,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b89173d97892e934994d2af2eb9a3083, type: 2}
+  - {fileID: 2100000, guid: 892c36dafde11f543a31a33237102b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -270,8 +270,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: c89ec22fe807d224bb05d771b869826f, type: 2}
-  - {fileID: 2100000, guid: b89173d97892e934994d2af2eb9a3083, type: 2}
+  - {fileID: 2100000, guid: d716fbf9a0166dc42873af0b82e3697f, type: 2}
+  - {fileID: 2100000, guid: 892c36dafde11f543a31a33237102b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -354,8 +354,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b89173d97892e934994d2af2eb9a3083, type: 2}
-  - {fileID: 2100000, guid: c89ec22fe807d224bb05d771b869826f, type: 2}
+  - {fileID: 2100000, guid: 892c36dafde11f543a31a33237102b40, type: 2}
+  - {fileID: 2100000, guid: d716fbf9a0166dc42873af0b82e3697f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -509,14 +509,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2794958616606377863}
     m_Modifications:
-    - target: {fileID: 4979738833553112557, guid: 9030eb82de2e9a14e8b3481b13e85d78, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.11899606
-      objectReference: {fileID: 0}
-    - target: {fileID: 4979738833553112557, guid: 9030eb82de2e9a14e8b3481b13e85d78, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.7579496
-      objectReference: {fileID: 0}
     - target: {fileID: 4979738833553112557, guid: 9030eb82de2e9a14e8b3481b13e85d78, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.535243
