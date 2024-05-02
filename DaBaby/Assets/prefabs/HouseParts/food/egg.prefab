@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 3020894609524065237}
   - component: {fileID: 4338758144243408621}
   - component: {fileID: 3038940224154586931}
+  - component: {fileID: -3701100156438600461}
+  - component: {fileID: -6034439432295102025}
   m_Layer: 0
   m_Name: egg
   m_TagString: Untagged
@@ -284,3 +286,39 @@ CapsuleCollider:
   m_Height: 0.100963384
   m_Direction: 1
   m_Center: {x: 0.0000019129366, y: 0.0063902866, z: -0.00000006891787}
+--- !u!136 &-3701100156438600461
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736463849476106726}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.05411829
+  m_Height: 0.100963384
+  m_Direction: 1
+  m_Center: {x: 0.0000019129366, y: 0.0063902866, z: -0.00000006891787}
+--- !u!114 &-6034439432295102025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736463849476106726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 774f2ea462683434984a0d473a4ac0d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  crackedEgg: {fileID: 4795520528671639098, guid: 33b7973834ad58f4488c56e439da76b3, type: 3}

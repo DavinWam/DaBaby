@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: -429525740112190477}
   - component: {fileID: 2855369579287785715}
   - component: {fileID: 2263334613421454320}
+  - component: {fileID: 4261260814663238395}
   m_Layer: 0
   m_Name: crackedEggFixed
   m_TagString: Untagged
@@ -192,6 +193,19 @@ CapsuleCollider:
   m_Height: 0.06
   m_Direction: 1
   m_Center: {x: 0, y: 0.012, z: 0}
+--- !u!114 &4261260814663238395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4795520528671639098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29cda140584a3c64092f892e0badc3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sunnySideUpEgg: {fileID: 7500895697772277376, guid: 86a6d767bd6b7094aace5f32b043f238, type: 3}
 --- !u!1 &7420843247255968686
 GameObject:
   m_ObjectHideFlags: 0
