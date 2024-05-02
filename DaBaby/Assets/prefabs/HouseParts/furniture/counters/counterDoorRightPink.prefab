@@ -9,9 +9,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 514825527140485700, guid: f2d1f13829f4f9844bd3384a9bf08c9e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 07787c25cd84c3c4cbb063e378f2074f, type: 2}
+    - target: {fileID: 514825527140485700, guid: f2d1f13829f4f9844bd3384a9bf08c9e, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: f8eb537aa8e19724ea3c9ecdc78cf7f3, type: 2}
+      objectReference: {fileID: 2100000, guid: 5ac460eaeb30a7248a8bdfd2c7e5e142, type: 2}
     - target: {fileID: 4488390007987896613, guid: f2d1f13829f4f9844bd3384a9bf08c9e, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -66,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5491363247508379060, guid: f2d1f13829f4f9844bd3384a9bf08c9e, type: 3}
       propertyPath: m_Name
-      value: counterDoorRight Variant
+      value: counterDoorRightPink
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

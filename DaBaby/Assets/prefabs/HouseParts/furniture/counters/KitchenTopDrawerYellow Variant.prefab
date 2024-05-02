@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 3110027260568504050, guid: 1b586d10e89957243a6a52f1ea29d5d1, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 02ad3edc1612ffd47a6478e288e775f6, type: 2}
+      objectReference: {fileID: 2100000, guid: 40ccac3c8403b7e4a86d8e8c3c19d6c3, type: 2}
     - target: {fileID: 4195468248994563087, guid: 1b586d10e89957243a6a52f1ea29d5d1, type: 3}
       propertyPath: m_Name
       value: KitchenTopDrawerYellow Variant
