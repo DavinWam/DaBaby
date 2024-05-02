@@ -1159,14 +1159,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4476086853100050636, guid: 16714b6e4d3b7ec41b9aef4ae6859019, type: 3}
-      propertyPath: m_Antialiasing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4476086853100050636, guid: 16714b6e4d3b7ec41b9aef4ae6859019, type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5925465448088968351, guid: 16714b6e4d3b7ec41b9aef4ae6859019, type: 3}
       propertyPath: m_Name
       value: Player
