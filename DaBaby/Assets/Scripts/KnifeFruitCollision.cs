@@ -5,11 +5,10 @@ using UnityEngine;
 public class KnifeFruitCollision : MonoBehaviour
 {
    public GameObject choppedFruit;
-   //List<string> potentialFruits = new List<string> {"Banana", "Apple", "Pear", "Grapes"};
 
     private void OnCollisionEnter(Collision collision) 
     {
-        if (collision.gameObject.name == "Apple")
+        if (collision.gameObject.name == "KnifeTemp")
         {
             Vector3 pos = collision.transform.position;
             float originalX = pos.x, originalZ = pos.z;
@@ -17,11 +16,16 @@ public class KnifeFruitCollision : MonoBehaviour
 
             for (int i = 0; i < 5; i++)
             {
-                if (i % 2 == 0){
-                 pos.x = originalX - (i * 0.02f);
-                } else{
-                 pos.z = originalZ - (i * 0.02f);
+                float subDistance = (i * 0.02f);
+
+                if (i % 2 == 0)
+                {
+                 pos.x = originalX - subDistance;
+                } else 
+                {
+                 pos.z = originalZ - subDistance;
                 }
+
                 Instantiate(choppedFruit, pos, Quaternion.identity);
             }
         }
