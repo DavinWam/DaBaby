@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KnifeFruitCollision : MonoBehaviour
 {
-   public GameObject choppedFruit;
+   public GameObject choppedFruit, plate;
 
     private void OnCollisionEnter(Collision collision) 
     {
@@ -13,6 +13,11 @@ public class KnifeFruitCollision : MonoBehaviour
             Vector3 pos = collision.transform.position;
             float originalX = pos.x, originalZ = pos.z;
             Destroy(gameObject);
+
+            Instantiate(plate, pos, Quaternion.identity);
+            
+            pos.y += .5f;
+
 
             for (int i = 0; i < 5; i++)
             {

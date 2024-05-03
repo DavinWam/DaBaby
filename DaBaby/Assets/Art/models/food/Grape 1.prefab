@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   choppedFruit: {fileID: 6743002930372199921, guid: 1c29ac1dde5bc614093e8725dd9d5d44, type: 3}
+  plate: {fileID: 8880492880436948564, guid: aba8e0d17cd8e774796fd3ba0faa72aa, type: 3}
 --- !u!54 &5234917612394493985
 Rigidbody:
   m_ObjectHideFlags: 0
