@@ -2,16 +2,17 @@ using UnityEngine;
 
 public class TextureChanger : MonoBehaviour
 {
-
-    public void ChangeTexture(Renderer renderer, Texture newTexture)
+    // Static method to change texture on all materials
+    public static void ChangeTexture(Renderer renderer, Texture newTexture)
     {
-        //gameObject.GetComponent<Renderer>();
-
-        // Make sure the renderer and newTexture are not null
+        // Ensure the renderer and newTexture are not null
         if (renderer != null && newTexture != null)
         {
-            // Change the texture tagged as "_DiffuseText"
-            renderer.material.SetTexture("_DiffuseText", newTexture);
+            // Loop through all materials and set the new texture
+            foreach (Material mat in renderer.materials)
+            {
+                mat.SetTexture("_DiffuseText", newTexture); // Update the texture key as needed
+            }
         }
     }
 }

@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 1755180777825076779}
   - component: {fileID: 6658741605849571521}
   - component: {fileID: 911403277458276870}
+  - component: {fileID: 7138390972173444746}
+  - component: {fileID: 3864654373893751275}
   m_Layer: 0
   m_Name: sunnySideUpEgg
   m_TagString: Untagged
@@ -26,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7500895697772277376}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.39370078, y: 0.39370078, z: 0.39370078}
   m_ConstrainProportionsScale: 0
@@ -84,3 +86,38 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7138390972173444746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7500895697772277376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 439ad0b68f39eb64497b2cd2ea7ff692, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToCook: 2
+  timeToBurn: 10
+--- !u!65 &3864654373893751275
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7500895697772277376}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.30834392, y: 0.02279822, z: 0.2813828}
+  m_Center: {x: 0.0000006631016, y: 0.00000004144385, z: -0.0000000745058}

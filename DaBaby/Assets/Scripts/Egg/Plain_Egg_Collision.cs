@@ -8,10 +8,6 @@ public class Plain_Egg_Collision : MonoBehaviour
     private bool hasMadeEgg = false;
     public float breakVelocity = .2f;
 
-    public void Update(){
-
-       
-    }
     private void OnCollisionEnter(Collision collision) 
     {
 
