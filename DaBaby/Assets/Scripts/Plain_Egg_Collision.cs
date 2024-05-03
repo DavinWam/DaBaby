@@ -19,9 +19,10 @@ public class Plain_Egg_Collision : MonoBehaviour
         if ( collision.relativeVelocity.magnitude > breakVelocity && !hasMadeEgg){
             hasMadeEgg = true;
             Debug.Log(collision.gameObject.name);
-            Vector3 pos = transform.position + new Vector3(0,.02f,0);
+            Vector3 pos = transform.position + new Vector3(0,.2f,0);
             Destroy(gameObject);
-            Instantiate(crackedEgg, pos, Quaternion.identity);
+            GameObject newEgg = Instantiate(crackedEgg, pos, Quaternion.identity);
+            newEgg.SetActive(true);
         }
     }
 }

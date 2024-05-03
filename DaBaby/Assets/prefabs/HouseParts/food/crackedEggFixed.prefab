@@ -102,7 +102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3341272340151994704
 Transform:
   m_ObjectHideFlags: 0
@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sunnySideUpEgg: {fileID: 7500895697772277376, guid: 86a6d767bd6b7094aace5f32b043f238, type: 3}
+  breakVelocity: 0.2
 --- !u!114 &9043602766443871658
 MonoBehaviour:
   m_ObjectHideFlags: 0
