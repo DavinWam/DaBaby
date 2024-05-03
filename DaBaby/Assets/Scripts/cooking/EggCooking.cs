@@ -18,7 +18,7 @@ public class EggCooking : MonoBehaviour
     private float cookingTime = 0f;
     private bool isOnPan = false;
     private Renderer eggRenderer;
-
+    private GameObject pan;
     void Start()
     {
         eggRenderer = GetComponent<Renderer>(); // Get the Renderer component at start
@@ -26,7 +26,8 @@ public class EggCooking : MonoBehaviour
 
     void Update()
     {
-        if (isOnPan)
+        
+        if (isOnPan && pan.GetComponentInChildren<panCooking>().isOnStove)
         {
             cookingTime += Time.deltaTime;
             UpdateEggState();
@@ -52,6 +53,7 @@ public class EggCooking : MonoBehaviour
         if (collision.gameObject.name == "Pan")
         {
             isOnPan = true;
+            pan = collision.gameObject;
             Debug.Log("Egg placed on the pan.");
         }
     }
