@@ -30,13 +30,7 @@ public class wall : MonoBehaviour
     {
         if (!walkpointSet) SearchForDest();
         if (walkpointSet) agent.SetDestination(destPoint);
-
-        Debug.Log("(agent.pathStatus == NavMeshPathStatus.PathComplete)");
-
-        Debug.Log((agent.pathStatus == NavMeshPathStatus.PathComplete));
-        Debug.Log(("agent.pathStatus"));
-
-        Debug.Log((agent.pathStatus));
+        Debug.Log((agent.pathStatus != NavMeshPathStatus.PathComplete));
 
         if(Vector3.Distance(transform.position,destPoint) < 6) walkpointSet = false;
 
@@ -46,11 +40,10 @@ public class wall : MonoBehaviour
     {
         float z = Random.Range(-range,range);
         float x = Random.Range(-range,range);
-        if (transform.position.x < -15)
-        {
-            //SearchForDest();
-        }
- 
+        Debug.Log(transform.position.x);
+        Debug.Log(transform.position.z);
+        Debug.Log(232434);
+
 
         destPoint = new Vector3(transform.position.x + x, transform.position.y,transform.position.z + z);
         if (Physics.Raycast(destPoint,Vector3.down,groundLayer)){
