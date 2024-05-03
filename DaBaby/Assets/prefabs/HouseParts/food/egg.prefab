@@ -13,9 +13,8 @@ GameObject:
   - component: {fileID: 7281642688065928756}
   - component: {fileID: 3020894609524065237}
   - component: {fileID: 4338758144243408621}
-  - component: {fileID: 3038940224154586931}
-  - component: {fileID: -3701100156438600461}
-  - component: {fileID: -6034439432295102025}
+  - component: {fileID: 1150321719381428835}
+  - component: {fileID: 7375223363564211777}
   m_Layer: 0
   m_Name: egg
   m_TagString: Untagged
@@ -32,9 +31,9 @@ Transform:
   m_GameObject: {fileID: 1736463849476106726}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.026866913, y: -0.014664054, z: -0.07650375}
-  m_LocalScale: {x: 0.43040213, y: 0.5910356, z: 0.43040213}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.44, y: 0.6042156, z: 0.44}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -263,7 +262,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!136 &3038940224154586931
+--- !u!136 &1150321719381428835
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -282,34 +281,11 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.05411829
-  m_Height: 0.100963384
+  m_Radius: 0.054118298
+  m_Height: 0.10096338
   m_Direction: 1
-  m_Center: {x: 0.0000019129366, y: 0.0063902866, z: -0.00000006891787}
---- !u!136 &-3701100156438600461
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1736463849476106726}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.05411829
-  m_Height: 0.100963384
-  m_Direction: 1
-  m_Center: {x: 0.0000019129366, y: 0.0063902866, z: -0.00000006891787}
---- !u!114 &-6034439432295102025
+  m_Center: {x: 0.0000000055879363, y: 0.006390286, z: -0.000000009313227}
+--- !u!114 &7375223363564211777
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -321,4 +297,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 774f2ea462683434984a0d473a4ac0d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crackedEgg: {fileID: 4795520528671639098, guid: 33b7973834ad58f4488c56e439da76b3, type: 3}
+  crackedEgg: {fileID: 5515711914889147348, guid: ea18bca4568933144bc39945aea702c8, type: 3}
+  breakVelocity: 0.02
