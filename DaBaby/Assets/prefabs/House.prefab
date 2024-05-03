@@ -1455,8 +1455,8 @@ Transform:
   - {fileID: 837425799331284940}
   - {fileID: 6158145822584351395}
   - {fileID: 4743396071850738856}
-  - {fileID: 6381188441572734619}
   - {fileID: 1829908989097103908}
+  - {fileID: 5663062680029988225}
   - {fileID: 250835377326631682}
   - {fileID: 5727359514433223071}
   - {fileID: 8062479377168393016}
@@ -4451,6 +4451,38 @@ Transform:
   - {fileID: 1153746151806557737}
   m_Father: {fileID: 3251152939652325529}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &9183132481670620271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5663062680029988225}
+  m_Layer: 0
+  m_Name: EggCarton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5663062680029988225
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9183132481670620271}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.189, y: 0.833, z: 2.038}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6381188441572734619}
+  m_Father: {fileID: 4693746545206237542}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &101713741598826226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4753,19 +4785,19 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 4693746545206237542}
+    m_TransformParent: {fileID: 5663062680029988225}
     m_Modifications:
     - target: {fileID: 5898111332880688832, guid: 0cfa00a309f24a34192ddcac9a7c5a66, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -7.656
       objectReference: {fileID: 0}
     - target: {fileID: 5898111332880688832, guid: 0cfa00a309f24a34192ddcac9a7c5a66, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.833
       objectReference: {fileID: 0}
     - target: {fileID: 5898111332880688832, guid: 0cfa00a309f24a34192ddcac9a7c5a66, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.902
       objectReference: {fileID: 0}
     - target: {fileID: 5898111332880688832, guid: 0cfa00a309f24a34192ddcac9a7c5a66, type: 3}
       propertyPath: m_LocalRotation.w
