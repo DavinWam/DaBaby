@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cca67f90ae8e09c459e6a5194dc78195
+guid: 983b61b80349a72449fc3fcc61a0f4d0
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,8 +7,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: a96b78cc1b775e24fa759d35457c5fd2, type: 2}
+      name: aiFlat1
+    second: {fileID: 2100000, guid: 42e12b6f1cfca74458c91404ab4bcaba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bodyFlat
+    second: {fileID: 2100000, guid: 400c40ad6e2b3014b857f87a610bd0e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: bodytexture
+    second: {fileID: 2100000, guid: 020cd0115949b0143a044f4622afc2a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: faces
+    second: {fileID: 2100000, guid: 6a8eeeb99a125da4385e52bd2c652cce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: standardSurface1
+    second: {fileID: 2100000, guid: 9bf3f38d417cefc40b1f1fe596aaeab4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -29,7 +49,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -98,13 +118,13 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 2
+  animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   importBlendShapeDeformPercent: 1
   remapMaterialsIfMaterialImportModeIsNone: 0
