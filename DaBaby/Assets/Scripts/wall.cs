@@ -32,7 +32,7 @@ public class wall : MonoBehaviour
         if (walkpointSet) agent.SetDestination(destPoint);
         Debug.Log((agent.pathStatus != NavMeshPathStatus.PathComplete));
 
-        if(Vector3.Distance(transform.position,destPoint) < 6) walkpointSet = false;
+        if(Vector3.Distance(transform.position,destPoint) < 3) walkpointSet = false;
 
     }
 
