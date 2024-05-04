@@ -4,45 +4,74 @@ using UnityEngine;
 
 public class ObjectInRange : MonoBehaviour
 {
-    public GameObject item;
-    public bool isAlreadyOpen;
+    public GameObject fridgeDoor, trashLid;
+    public bool isAlreadyOpenFridge, isAlreadyOpenTrash;
 
     void Start()
     {
-        isAlreadyOpen = false;
+        isAlreadyOpenFridge = false;
+        isAlreadyOpenTrash = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         // code derived from https://www.reddit.com/r/Unity3D/comments/jrl85f/detect_if_is_in_range/
-        if (inRange() && !isAlreadyOpen)
+        if (inRangeFridge() && !isAlreadyOpenFridge)
         {
-            rotateOpen();
+            rotateOpenFridge();
         }
-        else if (!inRange() && isAlreadyOpen) 
+        else if (!inRangeFridge() && isAlreadyOpenFridge) 
         {
-            rotateClose();
+            rotateCloseFridge();
+        }
+
+        if (inRangeTrash() && !isAlreadyOpenTrash)
+        {
+            rotateOpenTrash();
+        }
+        else if (!inRangeTrash() && isAlreadyOpenTrash) 
+        {
+            rotateCloseTrash();
         }
 
     }
 
-    bool inRange() {
-        Vector3 Offset = item.transform.position - gameObject.transform.position;
+    bool inRangeFridge() {
+        Vector3 Offset = fridgeDoor.transform.position - gameObject.transform.position;
         float Distance = Offset.magnitude;
 
         return (Distance < 3);
     }
 
-    void rotateOpen()
+    void rotateOpenFridge()
     {
-        isAlreadyOpen = true;
-        item.transform.rotation = Quaternion.AngleAxis(90, Vector3.down);
+        isAlreadyOpenFridge = true;
+        fridgeDoor.transform.rotation = Quaternion.AngleAxis(90, Vector3.down);
     }
 
-    void rotateClose()
+    void rotateCloseFridge()
     {
-        isAlreadyOpen = false;
-        item.transform.rotation = Quaternion.AngleAxis(0, Vector3.down);
+        isAlreadyOpenFridge = false;
+        fridgeDoor.transform.rotation = Quaternion.AngleAxis(0, Vector3.down);
+    }
+
+    bool inRangeTrash() {
+        Vector3 Offset = trashLid.transform.position - gameObject.transform.position;
+        float Distance = Offset.magnitude;
+
+        return (Distance < 2);
+    }
+
+    void rotateOpenTrash()
+    {
+        isAlreadyOpenTrash = true;
+        trashLid.transform.rotation = Quaternion.AngleAxis(90, Vector3.left);
+    }
+
+    void rotateCloseTrash()
+    {
+        isAlreadyOpenTrash = false;
+        trashLid.transform.rotation = Quaternion.AngleAxis(180, Vector3.left);
     }
 }

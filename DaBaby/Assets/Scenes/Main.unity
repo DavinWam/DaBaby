@@ -1148,8 +1148,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5512f8079123a240bd69b5ca4ae3f57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 1569846554}
-  isAlreadyOpen: 0
+  fridgeDoor: {fileID: 1569846554}
+  trashLid: {fileID: 373041500}
+  isAlreadyOpenFridge: 0
+  isAlreadyOpenTrash: 0
+--- !u!1 &373041500 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5799492615876748437, guid: b1d1c316f44003b4d9f5d23a6f2dc393, type: 3}
+  m_PrefabInstance: {fileID: 1739976805}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &411011440
 PrefabInstance:
   m_ObjectHideFlags: 0
