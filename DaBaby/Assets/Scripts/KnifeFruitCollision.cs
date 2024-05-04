@@ -8,7 +8,7 @@ public class KnifeFruitCollision : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision) 
     {
-        if (collision.gameObject.name == "KnifeTemp")
+        if (collision.gameObject.name == "THEKnife")
         {
             Vector3 pos = collision.transform.position;
             float originalX = pos.x, originalZ = pos.z;

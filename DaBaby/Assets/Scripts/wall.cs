@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-// Code from https://www.youtube.com/watch?v=-Iwsz4gdgyQ&t=24s
+// Some Code from https://www.youtube.com/watch?v=-Iwsz4gdgyQ&t=24s
 
 public class wall : MonoBehaviour
 {
@@ -14,9 +14,11 @@ public class wall : MonoBehaviour
     bool walkpointSet;
     [SerializeField] LayerMask groundLayer;
 
+
     // Start is called before the first frame update
     void Start()
     {
+        
         agent = GetComponent<NavMeshAgent>();
     }
 
@@ -28,9 +30,10 @@ public class wall : MonoBehaviour
 
     void Patrol()
     {
+        //agent.speed=0;
+
         if (!walkpointSet) SearchForDest();
         if (walkpointSet) agent.SetDestination(destPoint);
-        Debug.Log((agent.pathStatus != NavMeshPathStatus.PathComplete));
 
         if(Vector3.Distance(transform.position,destPoint) < 3) walkpointSet = false;
 
@@ -38,12 +41,7 @@ public class wall : MonoBehaviour
 
     void SearchForDest()
     {
-        float z = Random.Range(-range,range);
-        float x = Random.Range(-range,range);
-        Debug.Log(transform.position.x);
-        Debug.Log(transform.position.z);
-        Debug.Log(232434);
-
+        float z = Random.Range(-range,range), x = Random.Range(-range,range);
 
         destPoint = new Vector3(transform.position.x + x, transform.position.y,transform.position.z + z);
         if (Physics.Raycast(destPoint,Vector3.down,groundLayer)){
