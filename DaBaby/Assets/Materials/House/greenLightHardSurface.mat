@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-694393893483688047
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: greenLightHardSurface
+  m_Shader: {fileID: -6465566751694194690, guid: e83c66dd082ce0143856d5551f6ffdad, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _ADDITIONAL_LIGHTS
+  - _ADDITIONAL_LIGHT_SHADOWS
+  - _MAIN_LIGHT_CALCULATE_SHADOWS
+  - _MAIN_LIGHT_SHADOWS_CASCADE
+  - _SOFT_SHADOWS
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _DiffuseText:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_0cb4e26148c74e33a6486abb853cc1f8_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 45b5d63d71b30c747b2dd0d18adf6679, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ToonRamp:
+        m_Texture: {fileID: 2800000, guid: 3f3a5c67d62707c42b8676040cf6abad, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ADDITIONAL_LIGHTS: 1
+    - _ADDITIONAL_LIGHT_SHADOWS: 1
+    - _Albedo: 0.82
+    - _BOOLEAN: 1
+    - _BOOLEAN_1: 0
+    - _BOOLEAN_2: 0
+    - _Brightness: 0
+    - _DarkBalance: 0.5
+    - _EdgeDiffuse: 0.01
+    - _EdgeDistanceAttenuation: 0
+    - _EdgeRim: 1
+    - _EdgeRimOffset: 0
+    - _EdgeShadowAttenuation: 0
+    - _EdgeSpecular: 0.647
+    - _EdgeSpecularOffset: 0
+    - _Exposure: 1
+    - _Float: 0
+    - _Float_1: 0
+    - _Float_2: 0
+    - _Float_3: 0
+    - _MAIN_LIGHT_CALCULATE_SHADOWS: 1
+    - _MAIN_LIGHT_CALCULATE_SHADOW_1: 1
+    - _MAIN_LIGHT_CASCADE_SHADOWS: 1
+    - _MAIN_LIGHT_SHADOWS: 1
+    - _MAIN_LIGHT_SHADOWS_CASCADE: 1
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _SHADOWS_SOFT: 1
+    - _SOFT_SHADOWS: 1
+    - _ambientColor: 0.1
+    - _rimThreshHold: 0.1
+    - _shininess: 0.081
+    - _smoothness: 0.84
+    - _specularSize: 0.9
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.5176471, g: 0.59607846, b: 0.56078434, a: 1}
+    - _ShadowColor: {r: 0, g: 0, b: 0, a: 0}
+    - _Vector3: {r: 8, g: 8, b: 8, a: 0}
+    - _shadowColor: {r: 0.2910288, g: 0.4245283, b: 0.36445352, a: 0}
+  m_BuildTextureStacks: []
