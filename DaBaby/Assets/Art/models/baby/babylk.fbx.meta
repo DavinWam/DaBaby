@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:DaBaby/Assets/Art/models/baby/Animations/idle2ForUnity.fbx.meta
+guid: 9b084365007dd864e88fb8f66845ad45
+========
 guid: 4b5c2c6b1c9ee854881dcf757577841a
+>>>>>>>> origin/fruit_chopping:DaBaby/Assets/Art/models/baby/babylk.fbx.meta
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
