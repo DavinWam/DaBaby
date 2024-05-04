@@ -10,9 +10,9 @@ stay in that animation until a new animation is called.
 0 - Idle
 1 - Crawling
 2 - Angry/Tantrum
-3 - Being Held Up --- No smooth transition, snaps to animation
+3 - Being Held Up
 4 - Crying after falling back (fyi the transition from crawling to this is awkward)
-5 - Sitting in chair --- No smooth transition, snaps to animation
+5 - Sitting in chair
 6 - Eating --- Can only be done when the baby is already sitting
 7 - Happy Arm Flap
 8 - iPad watching (also has awkward transition to crawling)
@@ -36,11 +36,15 @@ public class BabyAnimationController : MonoBehaviour
         Happy
     }
 
+
     Faces currentFace = Faces.Neutral;
     Animator animator;
     public Material[] faceMaterials;
-    public GameObject head;
+    public GameObject head, hand, iPad;
     Renderer headRenderer;
+    GameObject ipadInScene = null;
+    Coroutine iPadCoroutine;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -88,6 +92,16 @@ public class BabyAnimationController : MonoBehaviour
                 currentFace = Faces.Happy;
                 headRenderer.material = faceMaterials[7];
                 break;
+        }
+
+        //handle iPadCreation
+        if (indexNum == 8 && ipadInScene == null)
+        {
+            iPadCoroutine = StartCoroutine(IPadTracking());
+        }
+        else if (indexNum != 8 && ipadInScene != null)
+        {
+            StartCoroutine(IPadExitAnim());
         }
     }
 
@@ -141,5 +155,27 @@ public class BabyAnimationController : MonoBehaviour
             }
                 
         }
+    }
+
+    IEnumerator IPadTracking()
+    {
+        while (!(animator.GetCurrentAnimatorStateInfo(0).IsName("idle2")))
+        {
+            yield return null;
+        }
+
+        yield return new WaitForSeconds(1.5f);
+        ipadInScene = Instantiate(iPad);
+        while (true)
+        {
+            ipadInScene.transform.position = hand.transform.position;
+            yield return null;
+        }
+    }
+    IEnumerator IPadExitAnim()
+    {
+        yield return new WaitForSeconds(1);
+        StopCoroutine(iPadCoroutine);
+        Destroy(ipadInScene);
     }
 }
