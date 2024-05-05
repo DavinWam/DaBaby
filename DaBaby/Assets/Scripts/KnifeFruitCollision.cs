@@ -5,18 +5,24 @@ using UnityEngine;
 public class KnifeFruitCollision : MonoBehaviour
 {
    public GameObject choppedFruit, plate;
+   public AudioSource chopping;
 
     private void OnCollisionEnter(Collision collision) 
     {
         if (collision.gameObject.name == "THEKnife")
         {
-            Vector3 pos = collision.transform.position;
+            Vector3 pos = transform.position;
             float originalX = pos.x, originalZ = pos.z;
+
+            chopping.Play();
+
             Destroy(gameObject);
 
             Instantiate(plate, pos, Quaternion.identity);
             
             pos.y += .5f;
+
+
 
 
             for (int i = 0; i < 5; i++)

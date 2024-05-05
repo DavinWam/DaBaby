@@ -6,6 +6,7 @@ public class ObjectInRange : MonoBehaviour
 {
     public GameObject fridgeDoor, trashLid;
     public bool isAlreadyOpenFridge, isAlreadyOpenTrash;
+    public AudioSource open, close, run;
 
     void Start()
     {
@@ -19,19 +20,26 @@ public class ObjectInRange : MonoBehaviour
         // code derived from https://www.reddit.com/r/Unity3D/comments/jrl85f/detect_if_is_in_range/
         if (inRangeFridge() && !isAlreadyOpenFridge)
         {
+            open.Play();
+            run.Play();
             rotateOpenFridge();
         }
         else if (!inRangeFridge() && isAlreadyOpenFridge) 
         {
+            close.Play();
+            run.Stop();
             rotateCloseFridge();
         }
+        
 
         if (inRangeTrash() && !isAlreadyOpenTrash)
         {
+            open.Play();
             rotateOpenTrash();
         }
         else if (!inRangeTrash() && isAlreadyOpenTrash) 
         {
+            close.Play();
             rotateCloseTrash();
         }
 
