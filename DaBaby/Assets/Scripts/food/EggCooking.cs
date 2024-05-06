@@ -50,22 +50,30 @@ public class EggCooking : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.name == "Pan")
+        if (collision.gameObject.tag == "Pan")
         {
             isOnPan = true;
             pan = collision.gameObject;
+
+            // Set the current object as a child of the pan
+            transform.SetParent(pan.transform);
+
             Debug.Log("Egg placed on the pan.");
         }
     }
 
     void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.name == "Pan")
+        if (collision.gameObject.tag == "Pan")
         {
             isOnPan = false;
             Debug.Log("Egg removed from the pan.");
             cookingTime = 0f; // Reset cooking time when egg is removed
+
+            // Remove the current object from being a child of the pan
+            transform.parent = null;
             // No need to update the texture to raw as it's assumed to be the default
         }
     }
+
 }
