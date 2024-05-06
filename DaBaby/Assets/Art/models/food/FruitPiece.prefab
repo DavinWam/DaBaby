@@ -69,6 +69,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a85a2accdb260548b904f4c15cc7856, type: 3}
       insertIndex: -1
       addedObject: {fileID: -3868514849225209867}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a85a2accdb260548b904f4c15cc7856, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7771057355093309387}
   m_SourcePrefab: {fileID: 100100000, guid: 8a85a2accdb260548b904f4c15cc7856, type: 3}
 --- !u!1 &6926139405779884087 stripped
 GameObject:
@@ -272,3 +275,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0050000036, y: 0.009024724, z: 0.0075000008}
   m_Center: {x: -0.0024999985, y: 0, z: 0}
+--- !u!114 &7771057355093309387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6926139405779884087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd712279ed422304b89ed8af87bef71f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bananaSpoon: {fileID: 1525258822374582901, guid: 33922580816d8604bb2cbae7fe9e03d4, type: 3}
+  fruitSpoon: {fileID: 4966691286472035849, guid: c2ac303624f4e2248a6fdc06ae7d95d7, type: 3}
+  grapeSpoon: {fileID: 917334592490879892, guid: dbc649fe15ee7e5448bbfceb779cf988, type: 3}
+  eggSpoon: {fileID: 5360154799202643279, guid: 6f9b2199c7c05874d85eca91eeaf25c7, type: 3}

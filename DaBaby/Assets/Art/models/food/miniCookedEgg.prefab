@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7443905554211490034
+--- !u!1 &7253540297795340519
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,50 +8,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8553963818466228245}
-  - component: {fileID: 3667547767726760757}
-  - component: {fileID: 4326407370639868560}
-  - component: {fileID: -8178217872307169005}
-  - component: {fileID: 7803745239791759264}
-  - component: {fileID: 2181268998292252782}
-  - component: {fileID: 743883751632431465}
+  - component: {fileID: 3057631209276228909}
+  - component: {fileID: 2958441870629379906}
+  - component: {fileID: 3326198200141580518}
+  - component: {fileID: 1774519352941042873}
+  - component: {fileID: 3144349284483212565}
+  - component: {fileID: 6702906321106038852}
+  - component: {fileID: -7811809779681441005}
   m_Layer: 0
-  m_Name: spoon
+  m_Name: miniCookedEgg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8553963818466228245
+--- !u!4 &3057631209276228909
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7443905554211490034}
+  m_GameObject: {fileID: 7253540297795340519}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.6811256, y: 0.8085529, z: -0.810376}
-  m_LocalScale: {x: 1, y: 0.07397457, z: 0.42888972}
-  m_ConstrainProportionsScale: 1
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.561592, y: 0.23848468, z: 2.141021}
+  m_LocalScale: {x: 0.18142913, y: 0.18142913, z: 0.18142913}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &3667547767726760757
+--- !u!33 &2958441870629379906
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7443905554211490034}
-  m_Mesh: {fileID: -687653740387709069, guid: 1c518e8cd1f720745a4c5c7199b254ec, type: 3}
---- !u!23 &4326407370639868560
+  m_GameObject: {fileID: 7253540297795340519}
+  m_Mesh: {fileID: -7552850922946953720, guid: db78dadb9cf7958488f93e94589386d8, type: 3}
+--- !u!23 &3326198200141580518
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7443905554211490034}
+  m_GameObject: {fileID: 7253540297795340519}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -65,7 +65,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8cce14180a5b8a745955ab007f5c81a1, type: 2}
+  - {fileID: 2100000, guid: 856ddf48b0fd66446abd8b3c3a9336f3, type: 2}
+  - {fileID: 2100000, guid: 892c36dafde11f543a31a33237102b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -87,29 +88,34 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-8178217872307169005
-MonoBehaviour:
+--- !u!65 &1774519352941042873
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7443905554211490034}
+  m_GameObject: {fileID: 7253540297795340519}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd712279ed422304b89ed8af87bef71f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bananaSpoon: {fileID: 1525258822374582901, guid: 33922580816d8604bb2cbae7fe9e03d4, type: 3}
-  fruitSpoon: {fileID: 4966691286472035849, guid: c2ac303624f4e2248a6fdc06ae7d95d7, type: 3}
-  grapeSpoon: {fileID: 917334592490879892, guid: dbc649fe15ee7e5448bbfceb779cf988, type: 3}
-  eggSpoon: {fileID: 5360154799202643279, guid: 6f9b2199c7c05874d85eca91eeaf25c7, type: 3}
---- !u!54 &7803745239791759264
+  serializedVersion: 3
+  m_Size: {x: 0.30834392, y: 0.02279822, z: 0.2813828}
+  m_Center: {x: 0.0000006631016, y: 0.00000004144385, z: -0.0000000745058}
+--- !u!54 &3144349284483212565
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7443905554211490034}
+  m_GameObject: {fileID: 7253540297795340519}
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
@@ -130,20 +136,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2181268998292252782
+--- !u!114 &6702906321106038852
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7443905554211490034}
+  m_GameObject: {fileID: 7253540297795340519}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 0}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -278,24 +285,18 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!65 &743883751632431465
-BoxCollider:
+--- !u!114 &-7811809779681441005
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7443905554211490034}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
+  m_GameObject: {fileID: 7253540297795340519}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.07154834, y: 0.2, z: 0.57083493}
-  m_Center: {x: -0.0000003874302, y: -0.000015502794, z: 0.000003874302}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd2de15c496ee64409ce71f6006ac648, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choppedFruit: {fileID: 7253540297795340519}
+  plate: {fileID: 8880492880436948564, guid: aba8e0d17cd8e774796fd3ba0faa72aa, type: 3}
+  chopping: {fileID: 2099574100287084664, guid: 6c98dcf4731f6b9418727f3ff1bde216, type: 3}
