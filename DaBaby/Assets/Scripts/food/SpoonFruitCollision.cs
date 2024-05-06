@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpoonFruitCollision : MonoBehaviour
 {
     //public List<string> potentialFruitPieces = new List<string> {"BananaSlice", "FruitPiece", "grape"};
-    public GameObject bananaSpoon, fruitSpoon, grapeSpoon;
+    public GameObject bananaSpoon, fruitSpoon, grapeSpoon, eggSpoon;
 
     private void OnCollisionEnter(Collision collision) 
     {
@@ -14,7 +14,7 @@ public class SpoonFruitCollision : MonoBehaviour
         Debug.Log(collision.gameObject.name == "BananaSlice" || collision.gameObject.name == "FruitPiece" || collision.gameObject.name == "grape");
 
         //if (potentialFruitPieces.Contains(collision.gameObject.name))
-        if (collision.gameObject.name.Contains("BananaSlice") || collision.gameObject.name.Contains("FruitPiece") || collision.gameObject.name.Contains("grape"))
+        if (collision.gameObject.name.Contains("BananaSlice") || collision.gameObject.name.Contains("FruitPiece") || collision.gameObject.name.Contains("grape") || collision.gameObject.name.Contains("miniCookedEgg"))
         {
             Debug.Log(collision.gameObject.name);
             Debug.Log("msfdr it thus far");
@@ -37,6 +37,9 @@ public class SpoonFruitCollision : MonoBehaviour
         else if (name.Contains("grape"))
         {
             Instantiate(grapeSpoon, pos, Quaternion.identity);
+        } else if (name.Contains("mini")) 
+        {
+            Instantiate(eggSpoon, pos, Quaternion.identity);
         }
     }
 }

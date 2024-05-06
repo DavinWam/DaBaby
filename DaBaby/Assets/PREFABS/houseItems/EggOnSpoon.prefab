@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6499786716837880410}
   - component: {fileID: 1805244391796320982}
   - component: {fileID: -3463466503638320465}
+  - component: {fileID: -6719699594016485277}
   m_Layer: 0
   m_Name: EggOnSpoon
   m_TagString: Untagged
@@ -284,3 +285,16 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &-6719699594016485277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5360154799202643279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 574a1b6e604af524a88f735d319c1c4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  regularSpoon: {fileID: 7443905554211490034, guid: 3a3480d936f28324dbfa95a47cb5a7e2, type: 3}
