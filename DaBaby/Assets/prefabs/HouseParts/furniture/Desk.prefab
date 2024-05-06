@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1739106270437269289}
   - component: {fileID: 4180134755257798817}
   - component: {fileID: 8726260021374620765}
+  - component: {fileID: 764003984111634247}
   m_Layer: 0
   m_Name: Desk
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7496933862218077237}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.5069883, y: 0.40520403, z: -3.0737462}
   m_LocalScale: {x: 0.39370078, y: 0.39370078, z: 0.39370078}
   m_ConstrainProportionsScale: 0
@@ -61,8 +62,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1d30fb028c1687446b422cc9098ee7c4, type: 2}
-  - {fileID: 2100000, guid: 3f9623be0da8c834a9a729c4ca8654cd, type: 2}
+  - {fileID: 2100000, guid: 07787c25cd84c3c4cbb063e378f2074f, type: 2}
+  - {fileID: 2100000, guid: 5042d3e4134641647a64e46d6240cb10, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,3 +85,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &764003984111634247
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7496933862218077237}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.2369037, y: 2.206133, z: 1.5618666}
+  m_Center: {x: -0.000004053116, y: -0.00000011920928, z: -0.0000006258487}

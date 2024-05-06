@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8907700615875545490}
   - component: {fileID: 8067066232197339099}
   - component: {fileID: 6359987690808925600}
+  - component: {fileID: 3086164962378413160}
   m_Layer: 0
   m_Name: blueCabinDoorLeft
   m_TagString: Untagged
@@ -84,3 +85,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3086164962378413160
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4851233915931732371}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.16412956, y: 1.4191595, z: 1.3966969}
+  m_Center: {x: 0.07619702, y: 0.00000023841858, z: -0.6987844}

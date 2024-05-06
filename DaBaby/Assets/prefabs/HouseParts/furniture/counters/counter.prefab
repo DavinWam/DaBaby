@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4737362031991458706}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: doors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,7 +49,11 @@ GameObject:
   - component: {fileID: 7652590562185281898}
   - component: {fileID: 5313097731745110305}
   - component: {fileID: 6123796232093018868}
-  m_Layer: 0
+  - component: {fileID: 804148822825674203}
+  - component: {fileID: 7787898136929590581}
+  - component: {fileID: 2463761293201067063}
+  - component: {fileID: 8764772505741305043}
+  m_Layer: 7
   m_Name: counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,8 +104,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f8eb537aa8e19724ea3c9ecdc78cf7f3, type: 2}
-  - {fileID: 2100000, guid: b89173d97892e934994d2af2eb9a3083, type: 2}
+  - {fileID: 2100000, guid: 5ac460eaeb30a7248a8bdfd2c7e5e142, type: 2}
+  - {fileID: 2100000, guid: 892c36dafde11f543a31a33237102b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -123,6 +127,90 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &804148822825674203
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7156941448015313144}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.5539474, y: 0.13, z: 11.393011}
+  m_Center: {x: -0.000007390976, y: 0.88, z: -0.00000023841858}
+--- !u!65 &7787898136929590581
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7156941448015313144}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.9, y: 1.8523219, z: 11.11}
+  m_Center: {x: 1.7, y: -0.0000005662441, z: -0.00000023841858}
+--- !u!65 &2463761293201067063
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7156941448015313144}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.36, y: 1.8523219, z: 0.57}
+  m_Center: {x: -1.44, y: -0.0000005662441, z: 5.28}
+--- !u!65 &8764772505741305043
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7156941448015313144}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.35, y: 1.8523219, z: 0.64}
+  m_Center: {x: -1.44, y: -0.0000005662441, z: -5.26}
 --- !u!1001 &2411417035219616698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -134,6 +222,10 @@ PrefabInstance:
     - target: {fileID: 1292100248970098342, guid: e69551bf422f2034ab05405bca3cb85b, type: 3}
       propertyPath: m_Name
       value: longDrawer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1292100248970098342, guid: e69551bf422f2034ab05405bca3cb85b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5202156405749198465, guid: e69551bf422f2034ab05405bca3cb85b, type: 3}
       propertyPath: m_LocalScale.y
@@ -253,6 +345,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: counterDoorRightPink
       objectReference: {fileID: 0}
+    - target: {fileID: 8493145129804836939, guid: a4b0c827792abc44c8795d2c444b283b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -327,6 +423,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: counterDoorRightPink
       objectReference: {fileID: 0}
+    - target: {fileID: 8493145129804836939, guid: a4b0c827792abc44c8795d2c444b283b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -388,6 +488,10 @@ PrefabInstance:
     - target: {fileID: 4763963338177332102, guid: 7982194d37a15804c84abcef4521552b, type: 3}
       propertyPath: m_Name
       value: counterDoorPink
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763963338177332102, guid: 7982194d37a15804c84abcef4521552b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -463,6 +567,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: counterDoorPink
       objectReference: {fileID: 0}
+    - target: {fileID: 4763963338177332102, guid: 7982194d37a15804c84abcef4521552b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -525,6 +633,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: KitchenTopDrawerPink
       objectReference: {fileID: 0}
+    - target: {fileID: 5682324209970320044, guid: 990881a0a986a7b48bb6b3f8917543eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -586,6 +698,10 @@ PrefabInstance:
     - target: {fileID: 5682324209970320044, guid: 990881a0a986a7b48bb6b3f8917543eb, type: 3}
       propertyPath: m_Name
       value: KitchenTopDrawerPink
+      objectReference: {fileID: 0}
+    - target: {fileID: 5682324209970320044, guid: 990881a0a986a7b48bb6b3f8917543eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

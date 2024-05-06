@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2136517455018273874}
   - component: {fileID: 3552483178458431364}
   - component: {fileID: 6037711672814150771}
-  m_Layer: 0
+  - component: {fileID: 7063238328657083705}
+  m_Layer: 7
   m_Name: TrashCanBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,6 +85,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7063238328657083705
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711464098020270334}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3523802474862856229, guid: db78dadb9cf7958488f93e94589386d8, type: 3}
 --- !u!1 &4661832831928047873
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,7 +118,7 @@ GameObject:
   - component: {fileID: 3411697278361516710}
   - component: {fileID: 1460989683232731896}
   - component: {fileID: 4102185877527550819}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: hinge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -114,7 +137,8 @@ Transform:
   m_LocalPosition: {x: -0.0055246353, y: 0.35867354, z: 0.1829884}
   m_LocalScale: {x: 0.40081894, y: 0.5119645, z: 0.13940056}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8078054053937526962}
   m_Father: {fileID: 8387603037387226911}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1460989683232731896
@@ -178,7 +202,8 @@ GameObject:
   - component: {fileID: 8078054053937526962}
   - component: {fileID: 5032177496088497803}
   - component: {fileID: 3607417212385347373}
-  m_Layer: 0
+  - component: {fileID: 7243412020259120648}
+  m_Layer: 7
   m_Name: TrashCanLid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,11 +219,11 @@ Transform:
   m_GameObject: {fileID: 6036530101878690404}
   serializedVersion: 2
   m_LocalRotation: {x: 6.123234e-17, y: 1, z: -6.123234e-17, w: -6.123234e-17}
-  m_LocalPosition: {x: 0, y: 0.36836585, z: 0.1815188}
-  m_LocalScale: {x: 0.29947752, y: 0.34757045, z: 0.3764967}
+  m_LocalPosition: {x: 0.013783369, y: 0.018931607, z: -0.010542369}
+  m_LocalScale: {x: 0.7471641, y: 0.67889553, z: 2.7008266}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 8387603037387226911}
+  m_Father: {fileID: 3411697278361516710}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5032177496088497803
 MeshFilter:
@@ -250,6 +275,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7243412020259120648
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6036530101878690404}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.5152671, y: 0.12772651, z: 0.9971879}
+  m_Center: {x: 0.0000014901161, y: 0.054811943, z: 0.48212484}
 --- !u!1 &7554727464742284286
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +305,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8387603037387226911}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LidTrashCan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +326,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2136517455018273874}
-  - {fileID: 8078054053937526962}
   - {fileID: 3411697278361516710}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

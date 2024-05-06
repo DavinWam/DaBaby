@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5434818741123389104}
   - component: {fileID: 1597522122935314929}
   - component: {fileID: 8018677368649851601}
+  - component: {fileID: 3284290845170848608}
   m_Layer: 0
   m_Name: refrigeratorShelf
   m_TagString: Untagged
@@ -83,3 +84,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3284290845170848608
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5238591557208639662}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.2068026, y: 0.04554982, z: 2.127935}
+  m_Center: {x: 0, y: 0, z: 0}

@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2592545270483930093}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.849, y: 1.0345113, z: 3.2712293}
   m_LocalScale: {x: 1, y: 1, z: 0.1163518}
   m_ConstrainProportionsScale: 0
@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 5593060005706657238}
   - component: {fileID: 6489208701185881778}
   - component: {fileID: 5831879567964302312}
+  - component: {fileID: 4590060042691955632}
   m_Layer: 0
   m_Name: doorKnob
   m_TagString: Untagged
@@ -117,6 +118,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4590060042691955632
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4763595690335313420}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.29473588, y: 0.91891766, z: 0.29473633}
+  m_Center: {x: 0.0000076293945, y: -0.034547094, z: -0.00000047683716}
 --- !u!1 &7302873214954299222
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +150,8 @@ GameObject:
   - component: {fileID: 4790621925195347452}
   - component: {fileID: 3437416741751292784}
   - component: {fileID: 4056520693877066139}
-  m_Layer: 0
+  - component: {fileID: 1875375866306217591}
+  m_Layer: 7
   m_Name: normalDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,6 +223,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1875375866306217591
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7302873214954299222}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 28.742609, y: 5.64767, z: 0.6912524}
+  m_Center: {x: 0.0000009536743, y: -0.00000023841858, z: -0.00000025331968}
 --- !u!1 &8314883174335477701
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,6 +255,8 @@ GameObject:
   - component: {fileID: 5602879991747087320}
   - component: {fileID: 4732149892203317249}
   - component: {fileID: 6363798626233966164}
+  - component: {fileID: 7535898417167104783}
+  - component: {fileID: 6189913794516692857}
   m_Layer: 0
   m_Name: doorFrame
   m_TagString: Untagged
@@ -283,3 +329,45 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7535898417167104783
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8314883174335477701}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.27, y: 5.733641, z: 0.7887837}
+  m_Center: {x: 1.27, y: 0.0201236, z: 0.0000024139883}
+--- !u!65 &6189913794516692857
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8314883174335477701}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.27, y: 5.733641, z: 0.7887837}
+  m_Center: {x: -1.33, y: 0.0201236, z: 0.0000024139883}

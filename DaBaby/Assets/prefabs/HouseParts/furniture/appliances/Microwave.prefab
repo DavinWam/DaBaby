@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 428018275831051906}
   - component: {fileID: 7135376335271530749}
   - component: {fileID: 2196280916923494049}
+  - component: {fileID: 4942480081427286211}
   m_Layer: 0
   m_Name: mircowaveTray
   m_TagString: Untagged
@@ -83,6 +84,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4942480081427286211
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2735168390310279991}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.8428185, y: 0.12821853, z: 0.84448504}
+  m_Center: {x: -0.0016694966, y: 0.0000019073486, z: 0.0000015497211}
 --- !u!1 &3716619410169145742
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +116,7 @@ GameObject:
   - component: {fileID: 7206888400306332107}
   - component: {fileID: 3103212026658144385}
   - component: {fileID: 1109444032406814135}
+  - component: {fileID: 527383173763401861}
   m_Layer: 0
   m_Name: microwaveBody
   m_TagString: Untagged
@@ -167,6 +190,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &527383173763401861
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3716619410169145742}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8841921864674773356, guid: db78dadb9cf7958488f93e94589386d8, type: 3}
 --- !u!1 &4201806414364633500
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,6 +257,7 @@ GameObject:
   - component: {fileID: 4575628886039914486}
   - component: {fileID: 5639242715001429532}
   - component: {fileID: 706554921914879164}
+  - component: {fileID: 3566317392581517561}
   m_Layer: 0
   m_Name: microwaveDoor
   m_TagString: Untagged
@@ -285,3 +331,24 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3566317392581517561
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4682703267651408456}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.18175486, y: 1.8662192, z: 1.8162336}
+  m_Center: {x: -0.09401161, y: 0.928418, z: -0.0000010430813}

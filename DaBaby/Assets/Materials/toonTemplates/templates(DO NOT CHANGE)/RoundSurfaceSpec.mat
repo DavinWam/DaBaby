@@ -81,7 +81,7 @@ Material:
     - _EdgeRimOffset: 0
     - _EdgeShadowAttenuation: 0
     - _EdgeSpecular: 0.01
-    - _EdgeSpecularOffset: 0.1
+    - _EdgeSpecularOffset: 0
     - _Exposure: 1
     - _Float: 0
     - _Float_1: 0
@@ -96,10 +96,11 @@ Material:
     - _QueueOffset: 0
     - _SHADOWS_SOFT: 1
     - _SOFT_SHADOWS: 1
+    - _ambientColor: 0.5
     - _rimThreshHold: 0.1
     - _shininess: 0.208
-    - _smoothness: 0.37
-    - _specularSize: 0.81
+    - _smoothness: 0
+    - _specularSize: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.8773585, g: 0.7506318, b: 0.59318256, a: 1}

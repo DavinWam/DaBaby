@@ -74,12 +74,12 @@ public class ObjectInRange : MonoBehaviour
     void rotateOpenTrash()
     {
         isAlreadyOpenTrash = true;
-        trashLid.transform.rotation = Quaternion.AngleAxis(90, Vector3.left);
+        trashLid.transform.rotation = Quaternion.Euler(90,0,0);
     }
 
     void rotateCloseTrash()
     {
         isAlreadyOpenTrash = false;
-        trashLid.transform.rotation = Quaternion.AngleAxis(180, Vector3.left);
+        trashLid.transform.rotation = Quaternion.Euler(0,0,0);
     }
 }
