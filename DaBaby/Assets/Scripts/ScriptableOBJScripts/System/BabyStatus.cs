@@ -27,7 +27,7 @@ public class BabyStatus : ScriptableObject
             energy = Mathf.Clamp(energy, 0, 100);
 
             UpdateOverallStatus();  // Update the overall status based on other factors
-        }
+        } //needs to handle being feed to entertained
     }
 
     private void UpdateOverallStatus()
