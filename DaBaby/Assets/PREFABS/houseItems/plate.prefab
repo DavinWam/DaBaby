@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8312177829741655185}
   - component: {fileID: 7218219773082795880}
   - component: {fileID: -5516828920797930053}
-  - component: {fileID: 163842880851023168}
-  - component: {fileID: 460238571280032585}
-  m_Layer: 0
+  - component: {fileID: 2413083628560653462}
+  - component: {fileID: 2923170557847167930}
+  m_Layer: 8
   m_Name: plate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30,11 +30,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8880492880436948564}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.494507, y: -0.083834045, z: -1.9532063}
-  m_LocalScale: {x: 0.40000004, y: 0.40000004, z: 0.40000004}
+  m_LocalScale: {x: 0.31459737, y: 0.3145974, z: 0.31459737}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 737569127384085537}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1509891533073178286
@@ -107,7 +108,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.81002265, y: 0.07407452, z: 0.81002337}
-  m_Center: {x: 0, y: -0.021730166, z: 0}
+  m_Center: {x: 0, y: -0.01, z: 0}
 --- !u!54 &-5516828920797930053
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -116,7 +117,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8880492880436948564}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 50
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -135,7 +136,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &163842880851023168
+--- !u!114 &2413083628560653462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8880492880436948564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd85c29bb99b3fd468a0cbd63e69c863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxFoodPieces: 5
+  foodPieces: []
+  spawnCenter: {fileID: 737569127384085537}
+  spawnRadius: 0.1
+--- !u!114 &2923170557847167930
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -283,19 +300,34 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &460238571280032585
-MonoBehaviour:
+--- !u!1 &9151488592641599293
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8880492880436948564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47ddeb45a17f145469108739c461403e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  potentialFruitPieces:
-  - BananaSlice
-  - FruitPiece
-  - Grape
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 737569127384085537}
+  m_Layer: 0
+  m_Name: foodHolderSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &737569127384085537
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9151488592641599293}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: -0.0181, z: 0}
+  m_LocalScale: {x: 3.1786664, y: 3.1786659, z: 3.1786664}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5940321001812177370}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

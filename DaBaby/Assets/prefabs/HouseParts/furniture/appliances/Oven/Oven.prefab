@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 4066678946408559951}
   - component: {fileID: 331993929829518828}
   - component: {fileID: 1509158421060579781}
+  - component: {fileID: 6262638363279570564}
   m_Layer: 0
   m_Name: stoveCircles
   m_TagString: Stove
@@ -207,11 +208,32 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5174369403881638999, guid: 1c518e8cd1f720745a4c5c7199b254ec, type: 3}
+--- !u!65 &6262638363279570564
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728864323599271472}
+  m_Material: {fileID: 13400000, guid: df67f39babad7004ca7daf8be9a7d400, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.5676212, y: 0.08, z: 1.2281395}
+  m_Center: {x: -0.00000038743036, y: -0.00000006519257, z: 0.0000008642673}
 --- !u!1 &2258489965094542763
 GameObject:
   m_ObjectHideFlags: 0

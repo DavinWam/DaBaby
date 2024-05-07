@@ -9,7 +9,7 @@ public class Egg_Crack_Collision : MonoBehaviour
     private void OnCollisionEnter(Collision collision) 
     {
         if (collision.relativeVelocity.magnitude > breakVelocity && collision.gameObject.tag == "Pan"){
-            Vector3 pos = collision.transform.position - new Vector3(0.12f,0.02f,0);
+            Vector3 pos = transform.position; 
             Destroy(gameObject);
             Instantiate(sunnySideUpEgg, pos, Quaternion.identity);
     }

@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class panCooking : MonoBehaviour
+public class PanCooking : MonoBehaviour
 {
     public bool isOnStove = false;
 
     void OnCollisionEnter(Collision collision)
     {
+        //Debug.Log(collision.gameObject.tag);
         if (collision.gameObject.tag == "Stove")
         {
             isOnStove = true;
