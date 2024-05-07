@@ -112,6 +112,7 @@ public class RecursiveHullObject : MonoBehaviour, IHullObject
             MeshFilter hullMeshFilter = hullInstance.AddComponent<MeshFilter>();
             hullMeshFilter.mesh = Instantiate(targetMeshFilter.mesh);
             MeshRenderer hullRenderer = hullInstance.AddComponent<MeshRenderer>();
+            hullRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
             hullRenderer.material = materialCopy;
           //  hullInstance.transform.localScale = CalculateNonUniformScale(targetMeshFilter, scale);
             allHullInstances.Add(hullInstance);

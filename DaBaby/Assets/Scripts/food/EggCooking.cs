@@ -18,7 +18,7 @@ public class EggCooking : MonoBehaviour
     private float cookingTime = 0f;
     private bool isOnPan = false;
     private Renderer eggRenderer;
-    private GameObject pan;
+    private PanCooking pan;
     void Start()
     {
         eggRenderer = GetComponent<Renderer>(); // Get the Renderer component at start
@@ -27,7 +27,7 @@ public class EggCooking : MonoBehaviour
     void Update()
     {
         
-        if (isOnPan && pan.GetComponentInChildren<panCooking>().isOnStove)
+        if (isOnPan && pan && pan.isOnStove)
         {
             cookingTime += Time.deltaTime;
             UpdateEggState();
@@ -53,10 +53,12 @@ public class EggCooking : MonoBehaviour
         if (collision.gameObject.tag == "Pan")
         {
             isOnPan = true;
-            pan = collision.gameObject;
+            if( collision.gameObject.GetComponent<PanCooking>()){
+                pan = collision.gameObject.GetComponent<PanCooking>();
+            }
 
             // Set the current object as a child of the pan
-            transform.SetParent(pan.transform);
+           // transform.SetParent(pan.transform);
 
             Debug.Log("Egg placed on the pan.");
         }
@@ -71,7 +73,7 @@ public class EggCooking : MonoBehaviour
             cookingTime = 0f; // Reset cooking time when egg is removed
 
             // Remove the current object from being a child of the pan
-            transform.parent = null;
+         //   transform.parent = null;
             // No need to update the texture to raw as it's assumed to be the default
         }
     }

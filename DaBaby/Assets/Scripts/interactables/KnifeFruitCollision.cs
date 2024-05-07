@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class KnifeFruitCollision : MonoBehaviour
 {
-   public GameObject choppedFruit, plate;
+   public GameObject choppedFruit;
    public AudioSource chopping;
 
     private void OnCollisionEnter(Collision collision) 
     {
-        if (collision.gameObject.name == "THEKnife")
+        if (collision.gameObject.tag == "Knife")
         {
             Vector3 pos = transform.position;
             float originalX = pos.x, originalZ = pos.z;
@@ -17,10 +17,8 @@ public class KnifeFruitCollision : MonoBehaviour
             chopping.Play();
 
             Destroy(gameObject);
-
-            Instantiate(plate, pos, Quaternion.identity);
             
-            pos.y += .5f;
+            pos.y += .2f;
 
 
 

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2209c75ab7de6ab49818944d5ec1e411, type: 3}
+  m_Name: babyStatus
+  m_EditorClassIdentifier: 
+  hunger: 93.250916
+  happiness: 93.261955
+  energy: 93.28533
+  overallStatus: 93.26607
+  hungerDecayRate: 0.01
+  happinessDecayRate: 0.01
+  energyDecayRate: 0.01
+  shouldDecay: 0

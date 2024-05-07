@@ -58,6 +58,7 @@ public class HullObject : MonoBehaviour, IHullObject
 
         // Add a renderer and set the material
         MeshRenderer hullRenderer = hullInstance.AddComponent<MeshRenderer>();
+        hullRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
         hullRenderer.material = materialCopy;
 
         // Set the initial scale based on the multiplier

@@ -13,11 +13,11 @@ GameObject:
   - component: {fileID: 8549710411096020056}
   - component: {fileID: 7355274266328190916}
   - component: {fileID: 9209177682164195193}
-  - component: {fileID: 4651799450633508570}
-  - component: {fileID: -6850341032861492219}
+  - component: {fileID: 5757313156760931143}
+  - component: {fileID: 6814451386694860270}
   m_Layer: 0
   m_Name: grape
-  m_TagString: Untagged
+  m_TagString: FoodPiece
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6743002930372199921}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.1
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -135,21 +135,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4651799450633508570
+--- !u!114 &5757313156760931143
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6743002930372199921}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
-  m_Colliders:
-  - {fileID: 0}
+  m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -284,7 +283,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &-6850341032861492219
+--- !u!114 &6814451386694860270
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -293,10 +292,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6743002930372199921}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd712279ed422304b89ed8af87bef71f, type: 3}
+  m_Script: {fileID: 11500000, guid: 36fd87dd8366bff4fb867bb0fc771482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bananaSpoon: {fileID: 1525258822374582901, guid: 33922580816d8604bb2cbae7fe9e03d4, type: 3}
-  fruitSpoon: {fileID: 4966691286472035849, guid: c2ac303624f4e2248a6fdc06ae7d95d7, type: 3}
-  grapeSpoon: {fileID: 917334592490879892, guid: dbc649fe15ee7e5448bbfceb779cf988, type: 3}
-  eggSpoon: {fileID: 5360154799202643279, guid: 6f9b2199c7c05874d85eca91eeaf25c7, type: 3}
+  maxInteractions: 3
+  filledSpoonPrefab: {fileID: 917334592490879892, guid: dbc649fe15ee7e5448bbfceb779cf988, type: 3}

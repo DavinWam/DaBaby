@@ -298,4 +298,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   crackedEgg: {fileID: 5515711914889147348, guid: ea18bca4568933144bc39945aea702c8, type: 3}
-  breakVelocity: 0.02
+  breakVelocity: 0.1
