@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class statusUI : MonoBehaviour
 {
-    public status statusScript;
+   // public status statusScript;
     public Sprite happyState;
     public Sprite neutralState;
     public Sprite madState;
@@ -14,14 +14,14 @@ public class statusUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        statusScript = GameObject.FindGameObjectWithTag("Player").GetComponent<status>(); //get status from baby object
+        //statusScript = GameObject.FindGameObjectWithTag("Player").GetComponent<status>(); //get status from baby object
         statusImage = GetComponent<Image>(); //get image
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (statusScript != null && statusImage != null) {
+/*        if (statusScript != null && statusImage != null) {
             float hunS = statusScript.hungerStatus;
             float hapS = statusScript.happyStatus;
             if ((hunS <= 400.0f && hunS > 300.0f) || (hapS <= 400.0f && hapS > 300.0f)) {
@@ -31,6 +31,6 @@ public class statusUI : MonoBehaviour
             } else {
                 statusImage.sprite = madState;
             }
-        }
+        }*/
     }
 }
