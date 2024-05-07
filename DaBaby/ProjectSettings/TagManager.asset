@@ -5,6 +5,13 @@ TagManager:
   serializedVersion: 2
   tags:
   - Anchor
+  - Stove
+  - Pan
+  - Food
+  - FoodPiece
+  - Knife
+  - iPad
+  - Toy
   layers:
   - Default
   - TransparentFX
@@ -14,7 +21,7 @@ TagManager:
   - UI
   - Outline
   - navmesh
-  - 
+  - Grabbable
   - 
   - 
   - 

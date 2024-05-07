@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 1591024055276174029}
   - component: {fileID: 8677238921576405704}
   - component: {fileID: 8599671798247986397}
-  m_Layer: 7
+  - component: {fileID: 5722596509771774453}
+  m_Layer: 0
   m_Name: broilerTray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,6 +84,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5722596509771774453
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524888141905160689}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.9153471, y: 1.4875759, z: 0.05884269}
+  m_Center: {x: 18.169985, y: 1.139317, z: -6.911644}
 --- !u!1 &1728864323599271472
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,9 +116,11 @@ GameObject:
   - component: {fileID: 7676897292459228259}
   - component: {fileID: 4066678946408559951}
   - component: {fileID: 331993929829518828}
+  - component: {fileID: 1509158421060579781}
+  - component: {fileID: 6262638363279570564}
   m_Layer: 0
   m_Name: stoveCircles
-  m_TagString: Untagged
+  m_TagString: Stove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -167,6 +191,49 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1509158421060579781
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728864323599271472}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5174369403881638999, guid: 1c518e8cd1f720745a4c5c7199b254ec, type: 3}
+--- !u!65 &6262638363279570564
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1728864323599271472}
+  m_Material: {fileID: 13400000, guid: df67f39babad7004ca7daf8be9a7d400, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.5676212, y: 0.08, z: 1.2281395}
+  m_Center: {x: -0.00000038743036, y: -0.00000006519257, z: 0.0000008642673}
 --- !u!1 &2258489965094542763
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +245,8 @@ GameObject:
   - component: {fileID: 6596122326242588187}
   - component: {fileID: 775327426951749663}
   - component: {fileID: 3109294980774093208}
-  m_Layer: 7
+  - component: {fileID: 3671069313315303898}
+  m_Layer: 0
   m_Name: OvenDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -251,6 +319,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3671069313315303898
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2258489965094542763}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.9153476, y: 1.4875759, z: 0.15407981}
+  m_Center: {x: -0.000003993511, y: 0.7481777, z: 0.0730819}
 --- !u!1 &2410487409059473632
 GameObject:
   m_ObjectHideFlags: 0
@@ -298,7 +387,8 @@ GameObject:
   - component: {fileID: 4989332487036937631}
   - component: {fileID: 1336961155045048274}
   - component: {fileID: 1233375996280255368}
-  m_Layer: 7
+  - component: {fileID: 9207515363701290099}
+  m_Layer: 0
   m_Name: broilerHandle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -370,6 +460,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9207515363701290099
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2878514409711221409}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.3828048, y: 0.10623537, z: 0.14187048}
+  m_Center: {x: 0, y: 0, z: 0.0000009536743}
 --- !u!1 &3224960984604700315
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,7 +492,8 @@ GameObject:
   - component: {fileID: 2822451494234314930}
   - component: {fileID: 5637475486993053178}
   - component: {fileID: 4045796729361018056}
-  m_Layer: 7
+  - component: {fileID: 417696600606226813}
+  m_Layer: 0
   m_Name: OvenBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -453,6 +565,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &417696600606226813
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3224960984604700315}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.2598858, y: 1.9502677, z: 3.2963421}
+  m_Center: {x: 0.0000009536743, y: 0.0145730665, z: -0.0000015497211}
 --- !u!1 &4124390007983915016
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,7 +678,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 661708844954956330}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Broiler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -649,14 +782,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3885613800200563849}
     m_Modifications:
-    - target: {fileID: 919567132479734421, guid: f13654f1a998fdc4b91ebd4dec95287b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.37159103
-      objectReference: {fileID: 0}
-    - target: {fileID: 919567132479734421, guid: f13654f1a998fdc4b91ebd4dec95287b, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5513913
-      objectReference: {fileID: 0}
     - target: {fileID: 919567132479734421, guid: f13654f1a998fdc4b91ebd4dec95287b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.011433364
@@ -845,7 +970,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2920930929084381986, guid: 521ef5d45520e1e4fa77d41c8f707544, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3103848570332581251, guid: 521ef5d45520e1e4fa77d41c8f707544, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -897,7 +1022,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8007221740695710481, guid: 521ef5d45520e1e4fa77d41c8f707544, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
