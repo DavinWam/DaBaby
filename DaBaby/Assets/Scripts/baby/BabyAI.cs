@@ -329,6 +329,7 @@ public class BabyAI : MonoBehaviour
                 ChangeState(BabyState.Satiated);
             }else{
                 GetComponent<BabyAnimationController>().SwitchAnimation(2);
+                ChangeState(BabyState.Idle);
             }
             return true;
         }else{
@@ -385,7 +386,7 @@ public class BabyAI : MonoBehaviour
 
     NeedCategory DetermineNeedCategory()
     {
-        return NeedCategory.Food;
+        return NeedCategory.Activity;
         float totalWeight = status.hunger + status.happiness + (100 - status.energy); // Define total weight for normalization
         float hungerWeight = status.hunger / totalWeight;
         float happinessWeight = (100 - status.happiness) / totalWeight; // Inverse because lower happiness increases the weight for attention
@@ -398,10 +399,10 @@ public class BabyAI : MonoBehaviour
         {
             need = NeedCategory.Food;
         }
-        // else if (randomValue < (hungerWeight + happinessWeight))
-        // {
-        //     need = NeedCategory.Attention;
-        // }
+        else if (randomValue < (hungerWeight + happinessWeight))
+        {
+            need = NeedCategory.Attention;
+        }
         else
         {
             need = NeedCategory.Activity;
