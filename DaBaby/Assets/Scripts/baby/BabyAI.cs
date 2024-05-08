@@ -213,8 +213,16 @@ public class BabyAI : MonoBehaviour
         {
             if (IsValidTarget(hitCollider, targetCategory))
             {
-                Debug.Log("Found " + targetCategory + ": " + hitCollider.name);
-                ChangeState(BabyState.Roaming, hitCollider.transform);  // Change to roaming and set the target
+                 Debug.Log("Found " + targetCategory + ": " + hitCollider.name);
+                switch (targetCategory){
+                    case NeedCategory.Activity:  
+                        ChangeState(BabyState.Roaming, hitCollider.transform);  // Change to roaming and set the target
+                        break;
+                    case NeedCategory.Food:
+                        break;
+                    case NeedCategory.Attention:
+                        break;
+                }
                 return;
             }
         }
@@ -276,6 +284,7 @@ public class BabyAI : MonoBehaviour
 
     void HandleRoaming()
     {
+        GetComponent<BabyAnimationController>().SwitchAnimation(1);
         if (targetObject != null && agent.remainingDistance <= agent.stoppingDistance)
         {
             float distanceToTarget = Vector3.Distance(transform.position, targetObject.position);
