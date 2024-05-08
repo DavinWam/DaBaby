@@ -39,7 +39,7 @@ public class PlateCollision : MonoBehaviour
                 collision.gameObject.transform.parent = transform;
                 // Randomly position the food piece around the plate
                 Vector3 randomOffset = Random.insideUnitCircle * spawnRadius;
-                Vector3 newPosition = spawnCenter.localPosition + new Vector3(randomOffset.x, 0.0f, randomOffset.y);
+                Vector3 newPosition = spawnCenter.localPosition + new Vector3(randomOffset.x, 0.1f, randomOffset.y);
                 collision.gameObject.transform.localPosition = newPosition;
                 // Add the food piece to the list
                 foodPieces.Add(collision.gameObject);

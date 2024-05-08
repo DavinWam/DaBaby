@@ -223,6 +223,8 @@ public class BabyAI : MonoBehaviour
             if (targetObject != null) agent.SetDestination(targetObject.position);
         }
 
+
+
         if (targetObject != null && agent.remainingDistance <= agent.stoppingDistance)
         {
             float distanceToTarget = Vector3.Distance(transform.position, targetObject.position);
@@ -241,37 +243,37 @@ public class BabyAI : MonoBehaviour
                 return;  // Exit the method to prevent further processing
             }
 
-            if (distanceToTarget <= grabRange)
-            {
-                if (((1 << targetObject.gameObject.layer) & grabbableLayer) != 0)
-                {
-                    // Object is within reach and is grabbable, attach it to an available hand
-                    AttachToHand(targetObject);
-                    ChangeState(BabyState.Satiated);
-                    ResetReachTimer();  // Reset the reach timer on successful grab
-                }
-                else
-                {
-                    // Object is within reach but not in the grabbable layer, inspect then go to targetless roaming
-                    InspectObject();  // A method to inspect the object
-                    Invoke("ChangeToTargetlessRoaming", 2.0f);  // Give some time for inspection
-                    ResetReachTimer();  // Reset the reach timer after inspection
-                }
-            }
-            else
-            {
-                // Object is visible but out of reach
-                if (desireRating > 80)  // High desire, decide on action
-                {
-                    AttemptToReach();  // Risky attempt to reach the object
-                }
-                else
-                {
-                    Debug.Log("Can see but can't reach " + targetObject.name);
-                    ChangeToTargetlessRoaming();  // Object is out of reach and not highly desired
-                    ResetReachTimer();  // Reset the timer
-                }
-            }
+            // if (distanceToTarget <= grabRange)
+            // {
+            //     if (((1 << targetObject.gameObject.layer) & grabbableLayer) != 0)
+            //     {
+            //         // Object is within reach and is grabbable, attach it to an available hand
+            //         AttachToHand(targetObject);
+            //         ChangeState(BabyState.Satiated);
+            //         ResetReachTimer();  // Reset the reach timer on successful grab
+            //     }
+            //     // else
+            //     // {
+            //     //     // Object is within reach but not in the grabbable layer, inspect then go to targetless roaming
+            //     //     InspectObject();  // A method to inspect the object
+            //     //     Invoke("ChangeToTargetlessRoaming", 2.0f);  // Give some time for inspection
+            //     //     ResetReachTimer();  // Reset the reach timer after inspection
+            //     // }
+            // }
+            // else
+            // {
+            //     // Object is visible but out of reach
+            //     if (desireRating > 80)  // High desire, decide on action
+            //     {
+            //         AttemptToReach();  // Risky attempt to reach the object
+            //     }
+            //     else
+            //     {
+            //         Debug.Log("Can see but can't reach " + targetObject.name);
+            //         ChangeToTargetlessRoaming();  // Object is out of reach and not highly desired
+            //         ResetReachTimer();  // Reset the timer
+            //     }
+            // }
         }
     }
 
@@ -455,7 +457,7 @@ public class BabyAI : MonoBehaviour
             case NeedCategory.Attention:
                 return collider.CompareTag("Player") || collider.CompareTag("Toy"); // Assuming "Parent" tag represents caregiver
             case NeedCategory.Activity:
-                return ((1 << collider.gameObject.layer) & LayerMask.GetMask("Grabbable")) != 0 || interests.Contains(collider.tag) || hazardTags.Contains(collider.tag);
+                return ((1 << collider.gameObject.layer) & LayerMask.GetMask("Grabbable")) != 0 || interests.Contains(collider.tag); //|| hazardTags.Contains(collider.tag);
             default:
                 return false;
         }

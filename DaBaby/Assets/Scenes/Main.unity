@@ -15769,6 +15769,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7218219773082795880, guid: aba8e0d17cd8e774796fd3ba0faa72aa, type: 3}
+      propertyPath: m_Size.y
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 8880492880436948564, guid: aba8e0d17cd8e774796fd3ba0faa72aa, type: 3}
       propertyPath: m_Name
       value: plate
