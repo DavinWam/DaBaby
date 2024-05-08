@@ -14,6 +14,7 @@ public class BabyStatus : ScriptableObject
 
     public bool shouldDecay = true;
 
+
     public void UpdateStatus()
     {
         if (shouldDecay)

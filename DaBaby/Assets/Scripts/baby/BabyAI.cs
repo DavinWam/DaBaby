@@ -391,7 +391,7 @@ public class BabyAI : MonoBehaviour
 
     NeedCategory DetermineNeedCategory()
     {
-        return NeedCategory.Activity;
+        return NeedCategory.Food;
         float totalWeight = status.hunger + status.happiness + (100 - status.energy); // Define total weight for normalization
         float hungerWeight = status.hunger / totalWeight;
         float happinessWeight = (100 - status.happiness) / totalWeight; // Inverse because lower happiness increases the weight for attention

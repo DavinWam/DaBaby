@@ -295,6 +295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36fd87dd8366bff4fb867bb0fc771482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxInteractions: 3
+  maxInteractions: 1
   filledSpoonPrefab: {fileID: 4966691286472035849, guid: c2ac303624f4e2248a6fdc06ae7d95d7, type: 3}
   foodType: 2

@@ -20,7 +20,7 @@ public class GameEnd : MonoBehaviour
         {
             curTime += Time.deltaTime; //normal 1 second time passage
 
-            if (intervalCnt == 2) //after 6 30 sec intervals
+            if (intervalCnt == 6) //after 6 30 sec intervals
             {
                 EndGame();
             }
