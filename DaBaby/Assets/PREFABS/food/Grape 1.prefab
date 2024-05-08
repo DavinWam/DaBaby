@@ -259,7 +259,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a59b8b06bd2950e4784901532f08ab5c, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -357,6 +357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredRotation: {x: 0, y: 0, z: -0.70710677, w: 0.70710677}
+  foodType: 1
 --- !u!1 &3167189986398194553
 GameObject:
   m_ObjectHideFlags: 0
