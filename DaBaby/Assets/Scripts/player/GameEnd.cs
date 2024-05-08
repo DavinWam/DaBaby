@@ -45,7 +45,7 @@ public class GameEnd : MonoBehaviour
                 finalScore += statusList[i];
             }
 
-            if (finalScore >= 500)
+            if (finalScore >= 10)
             {
                 SceneManager.LoadScene("GameEndWin");
                 //code for you win screen

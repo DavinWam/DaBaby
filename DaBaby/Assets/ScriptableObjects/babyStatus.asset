@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2209c75ab7de6ab49818944d5ec1e411, type: 3}
   m_Name: babyStatus
   m_EditorClassIdentifier: 
-  hunger: 20.474033
-  happiness: 20.474033
-  energy: 20.474033
-  overallStatus: 20.474033
-  hungerDecayRate: 1
-  happinessDecayRate: 1
-  energyDecayRate: 1
+  hunger: 92.49234
+  happiness: 92.49234
+  energy: 92.49234
+  overallStatus: 92.49234
+  hungerDecayRate: 0.25
+  happinessDecayRate: 0.25
+  energyDecayRate: 0.25
   shouldDecay: 1
