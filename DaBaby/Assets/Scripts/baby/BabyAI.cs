@@ -122,6 +122,9 @@ public class BabyAI : MonoBehaviour
             case BabyState.seated:
                 HandleSeated();
                 break;
+            case BabyState.Hungry:
+                HandleHungry();
+                break;
         }
     }
         void ChangeState(BabyState newState, Transform target = null)
@@ -179,7 +182,7 @@ public class BabyAI : MonoBehaviour
             if (idleCheckCooldown <= 0)
             {
                 LookForObjectsOfInterest();
-                idleCheckCooldown = 5f / (status.energy / 100);  // Reset cooldown
+               // idleCheckCooldown = 5f / (status.energy / 100);  // Reset cooldown
             }
         }
 
@@ -326,9 +329,11 @@ public class BabyAI : MonoBehaviour
         if(isSeated){
             if(spoonFood == wantedFood){
                 GetComponent<BabyAnimationController>().SwitchAnimation(7);
+                status.hunger += 30;
                 ChangeState(BabyState.Satiated);
             }else{
                 GetComponent<BabyAnimationController>().SwitchAnimation(2);
+                status.hunger += 15;
                 ChangeState(BabyState.Idle);
             }
             return true;
@@ -603,6 +608,7 @@ public class BabyAI : MonoBehaviour
     {
         yield return new WaitForSeconds(5f);
         status.shouldDecay = true; // Resume status decay
+        status.energy += 30;
         ChangeState(BabyState.Idle); // Return to Idle state
     }
 
