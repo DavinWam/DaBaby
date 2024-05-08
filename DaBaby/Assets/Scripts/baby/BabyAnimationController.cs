@@ -52,45 +52,59 @@ public class BabyAnimationController : MonoBehaviour
         headRenderer = head.GetComponent<Renderer>();
         StartCoroutine(BlinkingControl());
     }
-    public void SwitchAnimation(int indexNum)
+    public int SwitchAnimation(int indexNum)
     {
         animator.SetInteger("State", indexNum);
-
+        int anim = -1;
         switch (indexNum)
         {
             //Neutrals
             case 0:
+                anim = 0;
+                break;
             case 1:
+                anim = 1;
+                break;
             case 9:
                 currentFace = Faces.Neutral;
                 headRenderer.material = faceMaterials[9];
+                anim = 9;
                 break;
             //Angries
             case 2:
                 currentFace = Faces.Angry;
                 headRenderer.material = faceMaterials[0];
+                anim = 2;
                 break;
             //Crying
             case 4:
                 currentFace = Faces.Crying;
                 headRenderer.material = faceMaterials[2];
+                anim = 4;
                 break;
             //EatingOpen
             case 5:
                 currentFace = Faces.EatingOpen;
                 headRenderer.material = faceMaterials[5];
+                anim = 5;
                 break;
             //EatingClosed
             case 6:
                 currentFace = Faces.EatingClosed;
                 headRenderer.material = faceMaterials[3];
+                anim = 6;
                 break;
             //Happy
             case 3:
+                anim = 3;
+                break;
             case 7:
+                anim = 7;
+                break;
             case 8:
                 currentFace = Faces.Happy;
                 headRenderer.material = faceMaterials[7];
+                anim = 8;
                 break;
         }
 
@@ -98,11 +112,13 @@ public class BabyAnimationController : MonoBehaviour
         if (indexNum == 8 && ipadInScene == null)
         {
             iPadCoroutine = StartCoroutine(IPadTracking());
+
         }
         else if (indexNum != 8 && ipadInScene != null)
         {
             StartCoroutine(IPadExitAnim());
         }
+        return anim;
     }
 
     public void DebugSwitch(string indexNum)

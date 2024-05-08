@@ -443,3 +443,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredRotation: {x: 0, y: 0, z: -0.70710677, w: 0.70710677}
+  foodType: 2

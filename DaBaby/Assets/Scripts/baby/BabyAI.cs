@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -12,7 +13,8 @@ public class BabyAI : MonoBehaviour
         Satiated,
         TargetlessRoaming,
         Hurt,  
-        seated
+        seated,
+        Hungry
     }
 
     public enum NeedCategory
@@ -36,10 +38,14 @@ public class BabyAI : MonoBehaviour
     List<string> hazardTags = new List<string> { "Stove", "Knife", "Trash" };  // List of specific hazards
     public Transform leftArm, rightArm;  // Transforms for baby's arms
     private Transform targetObject;  // Target object to move towards
+    private NeedCategory need;
+    private FoodType wantedFood;
     public int desireRating;  // How much the baby wants the target object
     private XRGrabInteractable grabInteractable;
     bool isBeingHeld = false;
     bool isSeated = false;
+    private bool canSit = true;
+    public int currentAnimation;
     public Transform seatLocation;
     float timeHeld = 0f;
     float requiredComfortTime = 5f;
@@ -63,7 +69,7 @@ public class BabyAI : MonoBehaviour
 
     void OnCollisionEnter (Collision collision){
         Debug.Log(collision.gameObject.name );
-        if(collision.gameObject.name == "babySeat" && isBeingHeld){
+        if(collision.gameObject.name == "babySeat" && isBeingHeld && canSit){
             Debug.Log("seated");
             ForceRelease();
             ChangeState(BabyState.seated);
@@ -73,15 +79,23 @@ public class BabyAI : MonoBehaviour
     {
         agent.enabled = false;
         isBeingHeld = true;
+        canSit = false;
+        StartCoroutine(CanSit());
+        GetComponent<BabyAnimationController>().SwitchAnimation(3);
         timeHeld = 0f;  // Reset the time held counter
         Debug.Log("Baby has been picked up.");
     }
-
+    private IEnumerator CanSit(){
+        yield return new WaitForSeconds(.5f);
+        canSit = true;
+    }
     public void OnReleased(SelectExitEventArgs args)
     {
         agent.enabled = true;
         isBeingHeld = false;
+        GetComponent<BabyAnimationController>().SwitchAnimation(currentAnimation);
         Debug.Log("you let go of baby.");
+
     }
     void HandleStates()
     {
@@ -105,13 +119,17 @@ public class BabyAI : MonoBehaviour
             case BabyState.Hurt:
                 HandleHurt();  // Handle behavior when hurt
                 break;
+            case BabyState.seated:
+                HandleSeated();
+                break;
         }
     }
         void ChangeState(BabyState newState, Transform target = null)
     {
         // Cancel any repeating invocations when changing states to avoid overlap of behaviors
         CancelInvoke();
-
+        GetComponent<CapsuleCollider>().height = .6f;
+        isSeated = false;
         currentState = newState;
         targetObject = target;  // Set or reset the target object when changing states
         if (targetObject != null)
@@ -123,29 +141,58 @@ public class BabyAI : MonoBehaviour
             agent.ResetPath();  // Reset the current path of the agent
         }
 
-
+        switch (currentState)
+        {
+            case BabyState.Idle:
+               currentAnimation = GetComponent<BabyAnimationController>().SwitchAnimation(0);
+               // HandleIdle();
+                break;
+            case BabyState.TargetlessRoaming:
+               currentAnimation = GetComponent<BabyAnimationController>().SwitchAnimation(1);
+                break;
+            case BabyState.Roaming:
+               currentAnimation = GetComponent<BabyAnimationController>().SwitchAnimation(1);
+                break;
+            case BabyState.ShowingNeeds:
+               currentAnimation = GetComponent<BabyAnimationController>().SwitchAnimation(2);
+                break;
+            case BabyState.Satiated:
+               currentAnimation = GetComponent<BabyAnimationController>().SwitchAnimation(7);
+                break;
+            case BabyState.Hurt:
+                currentAnimation = GetComponent<BabyAnimationController>().SwitchAnimation(4);
+                break;
+            case BabyState.seated:
+                currentAnimation = GetComponent<BabyAnimationController>().SwitchAnimation(5);
+                break;
+            case BabyState.Hungry:
+                currentAnimation = GetComponent<BabyAnimationController>().SwitchAnimation(2);
+                break;
+        }
     }
 
     void HandleIdle()
     {
-        // if(!isBeingHeld){
-        //     agent.isStopped = true;
-        //     idleCheckCooldown -= Time.deltaTime;
-        //     if (idleCheckCooldown <= 0)
-        //     {
-        //         LookForObjectsOfInterest();
-        //         idleCheckCooldown = 5f / (status.energy / 100);  // Reset cooldown
-        //     }
-        // }
+        if(!isBeingHeld){
+            agent.isStopped = true;
+            idleCheckCooldown -= Time.deltaTime;
+            if (idleCheckCooldown <= 0)
+            {
+                LookForObjectsOfInterest();
+                idleCheckCooldown = 5f / (status.energy / 100);  // Reset cooldown
+            }
+        }
 
     }
     void HandleSeated()
     {
         if(isBeingHeld) ChangeState(BabyState.Idle);
 
-        agent.enabled = false;
+        
         isSeated = true;
         transform.position = seatLocation.position;
+        transform.rotation = Quaternion.Euler(0, 180, 0);
+        GetComponent<CapsuleCollider>().height = .8f;
 
     }
      // Class level variables
@@ -154,7 +201,7 @@ public class BabyAI : MonoBehaviour
 
     void HandleRoaming()
     {
-        GetComponent<BabyAnimationController>().SwitchAnimation(1);
+
 
         if (isBeingHeld)
         {
@@ -234,13 +281,15 @@ public class BabyAI : MonoBehaviour
             grabInteractable.enabled = false;
             isBeingHeld = false;
             Debug.Log("Forced release of the baby.");
-            Invoke("EnableGrabInteractable", 2.0f); // Re-enable after 1 second or appropriate time
+            StartCoroutine(EnableGrabInteractable());
+            //Invoke("EnableGrabInteractable", 2.0f); // Re-enable after 1 second or appropriate time
         }
 
     }
 
-    void EnableGrabInteractable()
+    IEnumerator EnableGrabInteractable()
     {
+        yield return new WaitForSeconds(2f);
         grabInteractable.enabled = true;
         CancelInvoke(nameof(AttemptBreakAway)); // Cancel the repeating break away attempts when released
         Debug.Log("baby can be grabbed again");
@@ -268,7 +317,25 @@ public class BabyAI : MonoBehaviour
             idleCheckCooldown = 5f / (status.energy / 100);  // Reset cooldown based on energy
         }
     }
+    void HandleHungry(){
+        //does nothing for now but should decrease status more
+    }
+    public bool Eat(FoodType spoonFood){
+        //decrease hunger if the correct food was given
 
+        if(isSeated){
+            if(spoonFood == wantedFood){
+                GetComponent<BabyAnimationController>().SwitchAnimation(7);
+                ChangeState(BabyState.Satiated);
+            }else{
+                GetComponent<BabyAnimationController>().SwitchAnimation(2);
+            }
+            return true;
+        }else{
+            return false;
+        }
+
+    }
     void HandleShowingNeeds()
     {
         if (!agent.isStopped)
@@ -318,8 +385,7 @@ public class BabyAI : MonoBehaviour
 
     NeedCategory DetermineNeedCategory()
     {
-        return NeedCategory.Activity;
-
+        return NeedCategory.Food;
         float totalWeight = status.hunger + status.happiness + (100 - status.energy); // Define total weight for normalization
         float hungerWeight = status.hunger / totalWeight;
         float happinessWeight = (100 - status.happiness) / totalWeight; // Inverse because lower happiness increases the weight for attention
@@ -330,16 +396,17 @@ public class BabyAI : MonoBehaviour
         // Determine the need category based on weighted probabilities
         if (randomValue < hungerWeight)
         {
-            return NeedCategory.Food;
+            need = NeedCategory.Food;
         }
-        else if (randomValue < (hungerWeight + happinessWeight))
-        {
-            return NeedCategory.Attention;
-        }
+        // else if (randomValue < (hungerWeight + happinessWeight))
+        // {
+        //     need = NeedCategory.Attention;
+        // }
         else
         {
-            return NeedCategory.Activity;
+            need = NeedCategory.Activity;
         }
+        return need;
     }
 
     void LookForObjectsOfInterest()
@@ -362,6 +429,8 @@ public class BabyAI : MonoBehaviour
                         ChangeState(BabyState.Roaming, hitCollider.transform);  // Change to roaming and set the target
                         break;
                     case NeedCategory.Food:
+                        wantedFood = hitCollider.gameObject.GetComponent<Fruit>().foodType;
+                        ChangeState(BabyState.Hungry, hitCollider.transform);
                         break;
                     case NeedCategory.Attention:
                         break;
@@ -525,15 +594,13 @@ public class BabyAI : MonoBehaviour
 
     void HandleSatiated()
     {
-        if (!IsInvoking(nameof(EndSatiated)))
-        {
-            status.shouldDecay = false; // Stop the status decay
-            Invoke(nameof(EndSatiated), 10f); // Set a timer for 10 seconds of being satiated
-        }
+        status.shouldDecay = false; // Stop the status decay
+        StartCoroutine(EndSatiated());
     }
 
-    void EndSatiated()
+    IEnumerator EndSatiated()
     {
+        yield return new WaitForSeconds(5f);
         status.shouldDecay = true; // Resume status decay
         ChangeState(BabyState.Idle); // Return to Idle state
     }

@@ -357,6 +357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredRotation: {x: 0, y: 0, z: -0.70710677, w: 0.70710677}
+  foodType: 1
 --- !u!1 &3167189986398194553
 GameObject:
   m_ObjectHideFlags: 0

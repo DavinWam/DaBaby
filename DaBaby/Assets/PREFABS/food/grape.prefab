@@ -297,3 +297,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxInteractions: 3
   filledSpoonPrefab: {fileID: 917334592490879892, guid: dbc649fe15ee7e5448bbfceb779cf988, type: 3}
+  foodType: 1

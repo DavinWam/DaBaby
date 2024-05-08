@@ -4,7 +4,7 @@ public class SpoonCollision : MonoBehaviour
 {
     public GameObject defaultSpoon; // The empty spoon object, likely this gameObject itself.
     public Transform spoonParent; // The parent object to maintain the correct hierarchy and transformations.
-
+    private FoodType  spoonFoodType = FoodType.Empty;
     private GameObject currentFilledSpoon = null;
 
     private void OnTriggerEnter(Collider other)
@@ -18,6 +18,7 @@ public class SpoonCollision : MonoBehaviour
                 currentFilledSpoon = Instantiate(foodPiece.filledSpoonPrefab, defaultSpoon.transform.position, defaultSpoon.transform.rotation, spoonParent);
                 currentFilledSpoon.SetActive(true);
 
+                spoonFoodType = other.GetComponent<FoodPiece>().foodType;
                 // Optionally disable the default spoon to show only the filled one
                 defaultSpoon.GetComponent<MeshRenderer>().enabled = false;
 
@@ -31,7 +32,10 @@ public class SpoonCollision : MonoBehaviour
     private void OnCollisionEnter(Collision collision){
         if (collision.gameObject.name.Contains("babyAnimated") && currentFilledSpoon)
         {
-            ResetSpoon();
+            if(collision.gameObject.GetComponent<BabyAI>().Eat(spoonFoodType)){
+                ResetSpoon();
+            }
+            
         }
     }
     public void ResetSpoon()
@@ -41,6 +45,7 @@ public class SpoonCollision : MonoBehaviour
         {
             Destroy(currentFilledSpoon);
             currentFilledSpoon = null;
+            spoonFoodType = FoodType.Empty;
         }
         defaultSpoon.GetComponent<MeshRenderer>().enabled = true;
     }

@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd2de15c496ee64409ce71f6006ac648, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  choppedFruit: {fileID: 6926139405779884087, guid: c1d79880f1351434e88e2cfb462e79fc, type: 3}
+  choppedFruit: {fileID: 2696994423478535785, guid: 47e229def7cb8414b87a4e006c6ae1b0, type: 3}
   chopping: {fileID: 1345036925294935058}
 --- !u!54 &2826070174334253677
 Rigidbody:
@@ -455,3 +455,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   desiredRotation: {x: 0, y: 0, z: -0.70710677, w: 0.70710677}
+  foodType: 3
