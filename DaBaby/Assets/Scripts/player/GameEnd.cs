@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameEnd : MonoBehaviour
 {
-    //public float gameTimeInSeconds = 300; // Total game time in seconds
     public float interval = 30;           // Interval to capture overall status
+    public BabyStatus status;
     private int intervalCnt = 0;          // Keep count of how many times we have reached a 30 sec interval
-    private float curTime;                // Current time elapsed
+    private float curTime = 0;            // Current time elapsed
     private bool isGameRunning = true;    // Flag to indicate if the game is running
 
     private List<float> statusList = new List<float>(); // List to store overall status values
@@ -19,12 +20,12 @@ public class GameEnd : MonoBehaviour
         {
             curTime += Time.deltaTime; //normal 1 second time passage
 
-            if (intervalCnt == 6) //after 6 30 sec intervals
+            if (intervalCnt == 2) //after 6 30 sec intervals
             {
                 EndGame();
             }
 
-            if(curTime == interval)
+            if(curTime >= interval)
             {
                 CapStatus();
                 curTime = 0; //reset
@@ -46,24 +47,25 @@ public class GameEnd : MonoBehaviour
 
             if (finalScore >= 500)
             {
+                SceneManager.LoadScene("GameEndWin");
                 //code for you win screen
+                Debug.Log("Game Over!");
             }
             else
             {
+                SceneManager.LoadScene("GameOverLose");
                 //code for you lose screen
+                Debug.Log("Game Over!");
             }
-
-
-            Debug.Log("Game Over!");
         }
 
         void CapStatus()
         {
-            BabyStatus babyStatus = FindObjectOfType<BabyStatus>();
-            if (babyStatus != null)
+            //BabyStatus babyStatus = FindObjectOfType<BabyStatus>();
+            if (status != null)
             {
                 // Store the overall status value
-                statusList.Add(babyStatus.overallStatus);
+                statusList.Add(status.overallStatus);
             }
         }
     }
