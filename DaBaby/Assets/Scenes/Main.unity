@@ -2672,7 +2672,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: panGrabbable
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3057283528734035556, guid: 327c72d865ed8d045ab2accf50331aae, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -11907,6 +11908,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7180092369838938061}
     m_Modifications:
+    - target: {fileID: 1140694581569329155, guid: 0cfa00a309f24a34192ddcac9a7c5a66, type: 3}
+      propertyPath: m_TagString
+      value: Food
+      objectReference: {fileID: 0}
     - target: {fileID: 1522078924623970755, guid: 0cfa00a309f24a34192ddcac9a7c5a66, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -11915,10 +11920,26 @@ PrefabInstance:
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1764678309}
+    - target: {fileID: 2182194110151593364, guid: 0cfa00a309f24a34192ddcac9a7c5a66, type: 3}
+      propertyPath: m_TagString
+      value: Food
+      objectReference: {fileID: 0}
+    - target: {fileID: 2237475259678982903, guid: 0cfa00a309f24a34192ddcac9a7c5a66, type: 3}
+      propertyPath: m_TagString
+      value: Food
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300781200081027938, guid: 0cfa00a309f24a34192ddcac9a7c5a66, type: 3}
+      propertyPath: m_TagString
+      value: Food
+      objectReference: {fileID: 0}
     - target: {fileID: 3169402246333312776, guid: 0cfa00a309f24a34192ddcac9a7c5a66, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1764678309}
+    - target: {fileID: 3544605135037576904, guid: 0cfa00a309f24a34192ddcac9a7c5a66, type: 3}
+      propertyPath: m_TagString
+      value: Food
+      objectReference: {fileID: 0}
     - target: {fileID: 3817107446423377865, guid: 0cfa00a309f24a34192ddcac9a7c5a66, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -11935,6 +11956,22 @@ PrefabInstance:
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1764678309}
+    - target: {fileID: 4750266428225165159, guid: 0cfa00a309f24a34192ddcac9a7c5a66, type: 3}
+      propertyPath: m_TagString
+      value: Food
+      objectReference: {fileID: 0}
+    - target: {fileID: 5010572460790926718, guid: 0cfa00a309f24a34192ddcac9a7c5a66, type: 3}
+      propertyPath: m_TagString
+      value: Food
+      objectReference: {fileID: 0}
+    - target: {fileID: 5633041523405868595, guid: 0cfa00a309f24a34192ddcac9a7c5a66, type: 3}
+      propertyPath: m_TagString
+      value: Food
+      objectReference: {fileID: 0}
+    - target: {fileID: 5849938520672467514, guid: 0cfa00a309f24a34192ddcac9a7c5a66, type: 3}
+      propertyPath: m_TagString
+      value: Food
+      objectReference: {fileID: 0}
     - target: {fileID: 5898111332880688832, guid: 0cfa00a309f24a34192ddcac9a7c5a66, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.656
@@ -15300,18 +15337,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 4693746544640911619}
     m_Modifications:
     - target: {fileID: 1755180777825076779, guid: 86a6d767bd6b7094aace5f32b043f238, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.39370087
-      objectReference: {fileID: 0}
-    - target: {fileID: 1755180777825076779, guid: 86a6d767bd6b7094aace5f32b043f238, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.39370072
-      objectReference: {fileID: 0}
-    - target: {fileID: 1755180777825076779, guid: 86a6d767bd6b7094aace5f32b043f238, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.3937008
-      objectReference: {fileID: 0}
-    - target: {fileID: 1755180777825076779, guid: 86a6d767bd6b7094aace5f32b043f238, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.895
       objectReference: {fileID: 0}
@@ -15354,14 +15379,6 @@ PrefabInstance:
     - target: {fileID: 7500895697772277376, guid: 86a6d767bd6b7094aace5f32b043f238, type: 3}
       propertyPath: m_Name
       value: sunnySideUpEgg
-      objectReference: {fileID: 0}
-    - target: {fileID: 7500895697772277376, guid: 86a6d767bd6b7094aace5f32b043f238, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7500895697772277376, guid: 86a6d767bd6b7094aace5f32b043f238, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
