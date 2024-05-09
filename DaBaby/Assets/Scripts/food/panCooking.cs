@@ -12,7 +12,6 @@ public class PanCooking : MonoBehaviour
         if (collision.gameObject.tag == "Stove")
         {
             isOnStove = true;
-            GetComponent<AudioSource>().Play();
             Debug.Log("pan placed on the stove.");
         }
     }
@@ -30,7 +29,7 @@ public class PanCooking : MonoBehaviour
         if (collision.gameObject.tag == "Stove")
         {
             isOnStove = false;
-            GetComponent<AudioSource>().Stop();
+
             Debug.Log("pan removed from the stove.");
             // No need to update the texture to raw as it's assumed to be the default
         }

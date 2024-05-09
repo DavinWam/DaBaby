@@ -31,6 +31,7 @@ public class EggCooking : MonoBehaviour
         {
             cookingTime += Time.deltaTime;
             UpdateEggState();
+            
         }
     }
 
@@ -40,6 +41,7 @@ public class EggCooking : MonoBehaviour
         {
             currentState = EggState.Burnt;
             TextureChanger.ChangeTexture(eggRenderer, burntTexture);
+            GetComponent<AudioSource>().Stop();
         }
         else if (cookingTime >= timeToCook && currentState == EggState.Raw)
         {
@@ -56,7 +58,9 @@ public class EggCooking : MonoBehaviour
             if( collision.gameObject.GetComponent<PanCooking>()){
                 pan = collision.gameObject.GetComponent<PanCooking>();
             }
-
+            if (pan.isOnStove){
+                GetComponent<AudioSource>().Play();
+            }
             // Set the current object as a child of the pan
            // transform.SetParent(pan.transform);
 
@@ -69,6 +73,7 @@ public class EggCooking : MonoBehaviour
         if (collision.gameObject.tag == "Pan")
         {
             isOnPan = false;
+            GetComponent<AudioSource>().Stop();
             Debug.Log("Egg removed from the pan.");
             cookingTime = 0f; // Reset cooking time when egg is removed
 

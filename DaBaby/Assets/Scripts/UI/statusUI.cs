@@ -14,7 +14,6 @@ public class statusUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        statusScript = GameObject.FindGameObjectWithTag("Player").GetComponent<BabyStatus>(); //get status from baby object
         statusImage = GetComponent<Image>(); //get image
     }
 
