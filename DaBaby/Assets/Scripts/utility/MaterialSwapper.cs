@@ -4,10 +4,13 @@ public class MaterialSwapper : MonoBehaviour
 {
     private Material[] originalMaterials;
     public Material swapMaterial;
-
+    public BabyAI babyAI;
     // Function to swap materials
     public void SwapMaterials()
     {
+        if (babyAI != null && babyAI.isBeingHeld == true){
+            return;
+        }
         Renderer renderer = GetComponent<Renderer>();
         if (renderer == null){
             renderer = GetComponentInChildren<Renderer>();

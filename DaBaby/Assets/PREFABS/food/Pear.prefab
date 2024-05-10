@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swapMaterial: {fileID: 2100000, guid: e772901d81e5b414b98c6458c6c01184, type: 2}
+  babyAI: {fileID: 0}
 --- !u!1 &8185395122614796959
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choppedFruit: {fileID: 2696994423478535785, guid: 47e229def7cb8414b87a4e006c6ae1b0, type: 3}
   chopping: {fileID: 1345036925294935058}
-  cutVelocity: 0.2
+  chopVelocity: 0.6
 --- !u!54 &2826070174334253677
 Rigidbody:
   m_ObjectHideFlags: 0

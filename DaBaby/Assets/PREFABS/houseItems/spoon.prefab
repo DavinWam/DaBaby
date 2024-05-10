@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 2183988304107157005}
   - component: {fileID: 3345062492043102283}
   - component: {fileID: 4132990541446514838}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: spoon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -448,3 +448,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swapMaterial: {fileID: 2100000, guid: e772901d81e5b414b98c6458c6c01184, type: 2}
+  babyAI: {fileID: 0}

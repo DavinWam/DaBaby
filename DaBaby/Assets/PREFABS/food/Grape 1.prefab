@@ -52,7 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   choppedFruit: {fileID: 6743002930372199921, guid: 1c29ac1dde5bc614093e8725dd9d5d44, type: 3}
   chopping: {fileID: 9217852792089271494}
-  chopVelocity: 0.8
+  chopVelocity: 0.6
 --- !u!54 &5234917612394493985
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -493,3 +493,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swapMaterial: {fileID: 2100000, guid: e772901d81e5b414b98c6458c6c01184, type: 2}
+  babyAI: {fileID: 0}

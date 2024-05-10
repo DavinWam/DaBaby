@@ -11,7 +11,7 @@ public class FoodPiece : MonoBehaviour
 
     private void Start()
     {
-       Destroy(gameObject, lifetime);
+       Destroy(gameObject, foodLifetime);
     }
 
     public void Interact()

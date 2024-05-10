@@ -6,6 +6,8 @@ public class BabyStatus : ScriptableObject
     public float hunger = 100f;
     public float happiness = 100f;
     public float energy = 100f;
+    public float love = 40f;
+
     public float overallStatus = 100f;  // New overall status field
 
     public float hungerDecayRate = 0.01f;
@@ -26,7 +28,7 @@ public class BabyStatus : ScriptableObject
             hunger = Mathf.Clamp(hunger, 0, 100);
             happiness = Mathf.Clamp(happiness, 0, 100);
             energy = Mathf.Clamp(energy, 0, 100);
-
+            love = Mathf.Clamp(love, 0,200);
             UpdateOverallStatus();  // Update the overall status based on other factors
         } //needs to handle being feed to entertained
     }
@@ -34,6 +36,6 @@ public class BabyStatus : ScriptableObject
     private void UpdateOverallStatus()
     {
         // Simple average of the three statuses for now
-        overallStatus = (hunger + happiness + energy) / 3;
+        overallStatus = ((hunger + happiness + energy) / 3) + love;
     }
 }
