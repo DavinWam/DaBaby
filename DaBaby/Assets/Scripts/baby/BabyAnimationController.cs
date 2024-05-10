@@ -43,8 +43,8 @@ public class BabyAnimationController : MonoBehaviour
     public GameObject head, hand, iPad;
     Renderer headRenderer;
     GameObject ipadInScene = null;
+    public GameObject grabbableIpad;
     Coroutine iPadCoroutine;
-
     // Start is called before the first frame update
     void Awake()
     {
@@ -60,9 +60,13 @@ public class BabyAnimationController : MonoBehaviour
         {
             //Neutrals
             case 0:
+                currentFace = Faces.Neutral;
+                headRenderer.material = faceMaterials[9];
                 anim = 0;
                 break;
             case 1:
+                currentFace = Faces.Neutral;
+                headRenderer.material = faceMaterials[9];
                 anim = 1;
                 break;
             case 9:
@@ -94,11 +98,14 @@ public class BabyAnimationController : MonoBehaviour
                 headRenderer.material = faceMaterials[3];
                 anim = 6;
                 break;
-            //Happy
+     
             case 3:
                 anim = 3;
                 break;
+            //Happy
             case 7:
+                currentFace = Faces.Happy;
+                headRenderer.material = faceMaterials[7];
                 anim = 7;
                 break;
             case 8:
@@ -111,10 +118,16 @@ public class BabyAnimationController : MonoBehaviour
         //handle iPadCreation
         if (indexNum == 8 && ipadInScene == null)
         {
-            iPadCoroutine = StartCoroutine(IPadTracking());
 
+            if(ipadInScene) 
+            {
+                Destroy(ipadInScene);
+                grabbableIpad.SetActive(true);
+            }else{
+                iPadCoroutine = StartCoroutine(IPadTracking());
+            }
         }
-        else if (indexNum != 8 && ipadInScene != null)
+        else
         {
             StartCoroutine(IPadExitAnim());
         }
@@ -182,6 +195,7 @@ public class BabyAnimationController : MonoBehaviour
 
         yield return new WaitForSeconds(1.5f);
         ipadInScene = Instantiate(iPad);
+        grabbableIpad.SetActive(false);
         while (true)
         {
             ipadInScene.transform.position = hand.transform.position;
@@ -191,7 +205,12 @@ public class BabyAnimationController : MonoBehaviour
     IEnumerator IPadExitAnim()
     {
         yield return new WaitForSeconds(1);
-        StopCoroutine(iPadCoroutine);
-        Destroy(ipadInScene);
+        if(iPadCoroutine != null) StopCoroutine(iPadCoroutine);
+        iPadCoroutine = null;
+        if(ipadInScene){
+            Destroy(ipadInScene);
+            grabbableIpad.SetActive(true);
+        }
+        
     }
 }

@@ -58,7 +58,7 @@ public class EggCooking : MonoBehaviour
             if( collision.gameObject.GetComponent<PanCooking>()){
                 pan = collision.gameObject.GetComponent<PanCooking>();
             }
-            if (pan.isOnStove){
+            if (pan && pan.isOnStove){
                 GetComponent<AudioSource>().Play();
             }
             // Set the current object as a child of the pan
