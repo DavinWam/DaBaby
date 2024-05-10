@@ -15,4 +15,8 @@ public class StartButtonGo : MonoBehaviour
         SceneManager.LoadScene("StartMenu");
     }
 
+    public void GoToInstructions()
+    {
+        SceneManager.LoadScene("Instructions");
+    }
 }
