@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5352857095634340543}
   - component: {fileID: 2766345896146518285}
   - component: {fileID: 268554901803900201}
+  - component: {fileID: -4913273215275229916}
   m_Layer: 0
   m_Name: sunnySideUpEgg
   m_TagString: FoodPiece
@@ -166,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxInteractions: 3
+  foodLifetime: 50
   filledSpoonPrefab: {fileID: 5360154799202643279, guid: 6f9b2199c7c05874d85eca91eeaf25c7, type: 3}
   foodType: 4
 --- !u!82 &268554901803900201
@@ -264,3 +266,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-4913273215275229916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7500895697772277376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.005
+  enableDynamicScaling: 0

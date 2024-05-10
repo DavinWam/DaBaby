@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1377287440737005953}
   - component: {fileID: 6369719692457951023}
   - component: {fileID: 2788623424846596361}
+  - component: {fileID: 4931373087478794877}
   m_Layer: 0
   m_Name: BananaSlice
   m_TagString: FoodPiece
@@ -296,5 +297,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxInteractions: 1
+  foodLifetime: 50
   filledSpoonPrefab: {fileID: 1525258822374582901, guid: 33922580816d8604bb2cbae7fe9e03d4, type: 3}
   foodType: 0
+--- !u!114 &4931373087478794877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377897198194943195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.005
+  enableDynamicScaling: 0

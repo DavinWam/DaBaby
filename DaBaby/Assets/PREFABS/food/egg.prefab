@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1150321719381428835}
   - component: {fileID: 7375223363564211777}
   - component: {fileID: 4526749116003699610}
+  - component: {fileID: 2394757528219955718}
   m_Layer: 0
   m_Name: egg
   m_TagString: Untagged
@@ -350,3 +351,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desiredRotation: {x: 0, y: 0, z: 0, w: 0}
   foodType: 4
+--- !u!114 &2394757528219955718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736463849476106726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.01
+  enableDynamicScaling: 0

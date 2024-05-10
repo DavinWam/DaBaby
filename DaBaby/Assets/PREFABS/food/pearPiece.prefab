@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: foodType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5916067118517093008, guid: c1d79880f1351434e88e2cfb462e79fc, type: 3}
+      propertyPath: scaleMultiplier
+      value: 1.005
+      objectReference: {fileID: 0}
     - target: {fileID: 6926139405779884087, guid: c1d79880f1351434e88e2cfb462e79fc, type: 3}
       propertyPath: m_Name
       value: pearPiece

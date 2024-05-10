@@ -144,8 +144,8 @@ Material:
     - _specularSize: 0.74
     m_Colors:
     - _BaseColor: {r: 0.8962264, g: 0.8680432, b: 0.6637148, a: 1}
-    - _Color: {r: 0.5, g: 0.35067794, b: 0.05974838, a: 1}
+    - _Color: {r: 0.745283, g: 0.6231432, b: 0.3913907, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _shadowColor: {r: 0.432, g: 0.23230188, b: 0, a: 0}
+    - _shadowColor: {r: 0.6132076, g: 0.429929, b: 0.21790077, a: 0}
   m_BuildTextureStacks: []

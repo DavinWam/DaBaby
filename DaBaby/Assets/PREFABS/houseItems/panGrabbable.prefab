@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3275952856510442268}
   - component: {fileID: 6709007288810210649}
   - component: {fileID: 4599334754986366227}
+  - component: {fileID: 4780378431559724208}
   m_Layer: 0
   m_Name: Pan
   m_TagString: Pan
@@ -124,6 +125,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   swapMaterial: {fileID: 2100000, guid: e772901d81e5b414b98c6458c6c01184, type: 2}
+  babyAI: {fileID: 0}
+--- !u!114 &4780378431559724208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1455299669020851438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.005
+  enableDynamicScaling: 0
 --- !u!1 &1648823851202990643
 GameObject:
   m_ObjectHideFlags: 0
