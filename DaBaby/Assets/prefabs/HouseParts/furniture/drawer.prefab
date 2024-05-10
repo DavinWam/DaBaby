@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4652314711745942340}
   - component: {fileID: 1490147528116663061}
   - component: {fileID: 2836732931614316441}
+  - component: {fileID: 7078428684347789846}
   m_Layer: 0
   m_Name: drawer
   m_TagString: Untagged
@@ -105,3 +106,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.259885, y: 1.9211229, z: 3.2963426}
   m_Center: {x: -0.000008404255, y: -0.00000023841858, z: 0.00000059604645}
+--- !u!114 &7078428684347789846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3657525702654796659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.02
+  enableDynamicScaling: 0

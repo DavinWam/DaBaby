@@ -114,10 +114,10 @@ Material:
     - _DstBlendAlpha: 0
     - _EdgeDiffuse: 0.02
     - _EdgeDistanceAttenuation: 1
-    - _EdgeRim: 0.7
+    - _EdgeRim: 0.578
     - _EdgeRimOffset: 0
-    - _EdgeShadowAttenuation: 5
-    - _EdgeSpecular: 0.01
+    - _EdgeShadowAttenuation: 0
+    - _EdgeSpecular: 0.144
     - _EdgeSpecularOffset: 0.01
     - _EnvironmentReflections: 1
     - _Exposure: 1
@@ -140,14 +140,14 @@ Material:
     - _UVSec: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
-    - _ambientColor: 0.5
+    - _ambientColor: 0.1
     - _rimThreshHold: 0
-    - _smoothness: 1.5
-    - _specularSize: 2
+    - _smoothness: 0.8
+    - _specularSize: 0.44
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.9622642, g: 0.94199425, b: 0.91384834, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _shadowColor: {r: 0.3490566, g: 0.18243146, b: 0.29982907, a: 0}
+    - _shadowColor: {r: 0.98044837, g: 0.76100624, b: 1, a: 1}
   m_BuildTextureStacks: []

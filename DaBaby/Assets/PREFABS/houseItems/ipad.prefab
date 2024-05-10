@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 1006583203467290325}
   - component: {fileID: 5072161249235753761}
   - component: {fileID: 3267182937897675427}
+  - component: {fileID: 156582067959063287}
   m_Layer: 8
   m_Name: ipad
   m_TagString: iPad
@@ -351,6 +352,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.6773571, y: 0.12657365, z: 0.8939046}
   m_Center: {x: -0.0049005896, y: 0.000006973743, z: -0.005804583}
+--- !u!114 &156582067959063287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5713216606845959360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.01
+  enableDynamicScaling: 0
 --- !u!1 &8931368965884856226
 GameObject:
   m_ObjectHideFlags: 0

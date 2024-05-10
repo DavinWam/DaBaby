@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8125803170403922079}
   - component: {fileID: 3170057076797804791}
   - component: {fileID: 1977293957066507874}
+  - component: {fileID: 6964934412506497713}
   m_Layer: 0
   m_Name: cornerShelf
   m_TagString: Untagged
@@ -127,3 +128,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.2558634, y: 1.7289118, z: 1.01}
   m_Center: {x: -0.000002324581, y: 0.0000047683734, z: -0.49}
+--- !u!114 &6964934412506497713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1551240295529566069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.02
+  enableDynamicScaling: 0

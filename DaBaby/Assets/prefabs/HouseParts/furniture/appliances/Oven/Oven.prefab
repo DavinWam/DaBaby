@@ -246,6 +246,7 @@ GameObject:
   - component: {fileID: 775327426951749663}
   - component: {fileID: 3109294980774093208}
   - component: {fileID: 3671069313315303898}
+  - component: {fileID: 3837826679769760982}
   m_Layer: 0
   m_Name: OvenDoor
   m_TagString: Untagged
@@ -340,6 +341,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.9153476, y: 1.4875759, z: 0.15407981}
   m_Center: {x: -0.000003993511, y: 0.7481777, z: 0.0730819}
+--- !u!114 &3837826679769760982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2258489965094542763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.02
+  enableDynamicScaling: 0
 --- !u!1 &2410487409059473632
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,6 +365,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 947494317012254343}
+  - component: {fileID: 2971905531995846517}
   m_Layer: 0
   m_Name: KNOBS
   m_TagString: Untagged
@@ -376,6 +393,21 @@ Transform:
   - {fileID: 3745037587624926327}
   m_Father: {fileID: 5801951051667897922}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2971905531995846517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2410487409059473632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 145df826fba58894cbaacef95c7d62f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scale: 1.02
+  enableDynamicScaling: 0
 --- !u!1 &2878514409711221409
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,6 +525,7 @@ GameObject:
   - component: {fileID: 5637475486993053178}
   - component: {fileID: 4045796729361018056}
   - component: {fileID: 417696600606226813}
+  - component: {fileID: 2705221885741104355}
   m_Layer: 0
   m_Name: OvenBody
   m_TagString: Untagged
@@ -586,6 +619,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.2598858, y: 1.9502677, z: 3.2963421}
   m_Center: {x: 0.0000009536743, y: 0.0145730665, z: -0.0000015497211}
+--- !u!114 &2705221885741104355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3224960984604700315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.02
+  enableDynamicScaling: 0
 --- !u!1 &4124390007983915016
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,6 +645,7 @@ GameObject:
   - component: {fileID: 651902482208350398}
   - component: {fileID: 6335541318159588022}
   - component: {fileID: 7637451510934277310}
+  - component: {fileID: 6331411817556377297}
   m_Layer: 0
   m_Name: Exhuast
   m_TagString: Untagged
@@ -669,6 +718,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6331411817556377297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4124390007983915016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.1
+  enableDynamicScaling: 0
 --- !u!1 &5560807937935246527
 GameObject:
   m_ObjectHideFlags: 0
@@ -678,6 +742,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 661708844954956330}
+  - component: {fileID: 4814287933777507045}
   m_Layer: 0
   m_Name: Broiler
   m_TagString: Untagged
@@ -702,6 +767,21 @@ Transform:
   - {fileID: 1591024055276174029}
   m_Father: {fileID: 5801951051667897922}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4814287933777507045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5560807937935246527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 145df826fba58894cbaacef95c7d62f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scale: 1.02
+  enableDynamicScaling: 0
 --- !u!1 &6887440293191416404
 GameObject:
   m_ObjectHideFlags: 0
@@ -711,6 +791,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3885613800200563849}
+  - component: {fileID: 6384089442526351530}
   m_Layer: 0
   m_Name: SHELFS
   m_TagString: Untagged
@@ -736,6 +817,21 @@ Transform:
   - {fileID: 9064651311585956159}
   m_Father: {fileID: 5801951051667897922}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6384089442526351530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6887440293191416404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 145df826fba58894cbaacef95c7d62f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scale: 1.02
+  enableDynamicScaling: 0
 --- !u!1 &7134150956952605073
 GameObject:
   m_ObjectHideFlags: 0

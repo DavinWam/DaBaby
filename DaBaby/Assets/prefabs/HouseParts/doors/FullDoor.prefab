@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2854110027473819730}
   - component: {fileID: 1961119583811182258}
   - component: {fileID: 634134097258641143}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DoorFrame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 02ad3edc1612ffd47a6478e288e775f6, type: 2}
+  - {fileID: 2100000, guid: 40ccac3c8403b7e4a86d8e8c3c19d6c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -92,7 +92,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1849100949318851195}
-  m_Layer: 0
+  - component: {fileID: 6850974016001157337}
+  m_Layer: 7
   m_Name: FullDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,6 +121,21 @@ Transform:
   - {fileID: 6529521557644933702}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6850974016001157337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417302379087416896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 145df826fba58894cbaacef95c7d62f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scale: 1.02
+  enableDynamicScaling: 0
 --- !u!1 &2792908577181413054
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,7 +147,7 @@ GameObject:
   - component: {fileID: 2651134689752022525}
   - component: {fileID: 1128586236805917606}
   - component: {fileID: 2218624989004707869}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: knobHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +230,7 @@ GameObject:
   - component: {fileID: 3920305492805905499}
   - component: {fileID: 8668731809863437798}
   - component: {fileID: 9164435283925004639}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: knob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +281,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1d30fb028c1687446b422cc9098ee7c4, type: 2}
+  - {fileID: 2100000, guid: 07787c25cd84c3c4cbb063e378f2074f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -298,7 +314,7 @@ GameObject:
   - component: {fileID: 7309397463458660391}
   - component: {fileID: 4121122249118439706}
   - component: {fileID: 3652194558597911699}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: lockHole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,7 +364,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1d30fb028c1687446b422cc9098ee7c4, type: 2}
+  - {fileID: 2100000, guid: 07787c25cd84c3c4cbb063e378f2074f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -381,7 +397,7 @@ GameObject:
   - component: {fileID: 6529521557644933702}
   - component: {fileID: 7499076720594652070}
   - component: {fileID: 2086068462894453156}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: lock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +448,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1d30fb028c1687446b422cc9098ee7c4, type: 2}
+  - {fileID: 2100000, guid: 07787c25cd84c3c4cbb063e378f2074f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -469,6 +485,10 @@ PrefabInstance:
     - target: {fileID: 7334879578347568207, guid: 2d5c60610fa484f4398e384d191de8a9, type: 3}
       propertyPath: m_Name
       value: outerDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 7334879578347568207, guid: 2d5c60610fa484f4398e384d191de8a9, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8330948212384108443, guid: 2d5c60610fa484f4398e384d191de8a9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -572,6 +592,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: doorSide
       objectReference: {fileID: 0}
+    - target: {fileID: 2231233060277421265, guid: 6e84de326f9f5a148aa35916a36b6daa, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -633,6 +657,10 @@ PrefabInstance:
     - target: {fileID: 2231233060277421265, guid: 6e84de326f9f5a148aa35916a36b6daa, type: 3}
       propertyPath: m_Name
       value: doorSide
+      objectReference: {fileID: 0}
+    - target: {fileID: 2231233060277421265, guid: 6e84de326f9f5a148aa35916a36b6daa, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

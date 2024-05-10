@@ -78,7 +78,8 @@ GameObject:
   - component: {fileID: 2183988304107157005}
   - component: {fileID: 3345062492043102283}
   - component: {fileID: 4132990541446514838}
-  m_Layer: 0
+  - component: {fileID: 3851255377969800681}
+  m_Layer: 8
   m_Name: spoon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,3 +450,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swapMaterial: {fileID: 2100000, guid: e772901d81e5b414b98c6458c6c01184, type: 2}
   babyAI: {fileID: 0}
+--- !u!114 &3851255377969800681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7443905554211490034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.01
+  enableDynamicScaling: 0

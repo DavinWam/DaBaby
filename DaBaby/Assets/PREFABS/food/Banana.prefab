@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 880232844663065024}
   - component: {fileID: 3505771818302916053}
   - component: {fileID: 977243684015734792}
+  - component: {fileID: 1249011571826681107}
   m_Layer: 8
   m_Name: Banana
   m_TagString: Food
@@ -227,13 +228,13 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8617589177021300214}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_material
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: BabyAI, Assembly-CSharp
+        m_MethodName: babyHas
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2100000, guid: 5cb35ea835c18124da35eafe74188be0, type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -446,3 +447,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   desiredRotation: {x: 0.05547893, y: -0.70492697, z: -0.70492697, w: -0.05547893}
   foodType: 0
+--- !u!114 &1249011571826681107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7824775391644834851}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.01
+  enableDynamicScaling: 0

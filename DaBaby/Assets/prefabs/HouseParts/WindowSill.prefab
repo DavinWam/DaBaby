@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 2008027670835571937}
   - component: {fileID: 1317764467467138628}
   - component: {fileID: 7881492308524814685}
-  m_Layer: 0
+  - component: {fileID: 1159036394153080326}
+  m_Layer: 7
   m_Name: WindowSill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7483671842910123143}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.00025676726, y: 0.5109347, z: -8.092372}
   m_LocalScale: {x: 0.13442537, y: 1.6867542, z: 0.6220638}
   m_ConstrainProportionsScale: 0
@@ -83,3 +84,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1159036394153080326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7483671842910123143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.02
+  enableDynamicScaling: 0

@@ -99,6 +99,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7a9881fc2b59b684d9ef40f86a796a0b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2638585893834020635}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7a9881fc2b59b684d9ef40f86a796a0b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1900260009863312136}
   m_SourcePrefab: {fileID: 100100000, guid: 7a9881fc2b59b684d9ef40f86a796a0b, type: 3}
 --- !u!1 &7107764792657846101 stripped
 GameObject:
@@ -127,6 +130,21 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 2540817853737639666, guid: 7a9881fc2b59b684d9ef40f86a796a0b, type: 3}
+--- !u!114 &1900260009863312136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7107764792657846101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.01
+  enableDynamicScaling: 0
 --- !u!4 &7631361418525558255 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7a9881fc2b59b684d9ef40f86a796a0b, type: 3}

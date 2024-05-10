@@ -407,6 +407,7 @@ GameObject:
   - component: {fileID: 1294778632961852211}
   - component: {fileID: 5117715294255330748}
   - component: {fileID: 6258775592178475840}
+  - component: {fileID: 1134883009498777462}
   m_Layer: 0
   m_Name: model
   m_TagString: Untagged
@@ -494,3 +495,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swapMaterial: {fileID: 2100000, guid: e772901d81e5b414b98c6458c6c01184, type: 2}
   babyAI: {fileID: 0}
+--- !u!114 &1134883009498777462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3167189986398194553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.01
+  enableDynamicScaling: 0

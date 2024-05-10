@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7196652685672640264}
+  - component: {fileID: 7486973969664677235}
   m_Layer: 7
   m_Name: doors
   m_TagString: Untagged
@@ -52,6 +53,21 @@ Transform:
   - {fileID: 2838289620051388475}
   m_Father: {fileID: 8745539491683904025}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7486973969664677235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6373816538360985574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 145df826fba58894cbaacef95c7d62f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scale: 1.02
+  enableDynamicScaling: 0
 --- !u!1 &6591948936539126073
 GameObject:
   m_ObjectHideFlags: 0
@@ -98,6 +114,7 @@ GameObject:
   - component: {fileID: 7487743066576192781}
   - component: {fileID: 913243997241468690}
   - component: {fileID: 7075818059482973239}
+  - component: {fileID: 7693156257910165010}
   m_Layer: 7
   m_Name: counterBody
   m_TagString: Untagged
@@ -216,6 +233,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5.870855, y: 2.1785924, z: 2.1}
   m_Center: {x: -0.00000011920928, y: 0, z: -5.92}
+--- !u!114 &7693156257910165010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7644217981216247544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.02
+  enableDynamicScaling: 1
 --- !u!1001 &396817767285503039
 PrefabInstance:
   m_ObjectHideFlags: 0

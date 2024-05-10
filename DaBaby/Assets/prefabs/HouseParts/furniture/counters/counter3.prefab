@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 5810884820375101284}
   - component: {fileID: 9185995583122563170}
   - component: {fileID: 3118093227421460218}
+  - component: {fileID: 5569798243490324736}
   m_Layer: 7
   m_Name: counterBody
   m_TagString: Untagged
@@ -139,6 +140,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.5934286, y: 1.852323, z: 11.093888}
   m_Center: {x: -0.14060143, y: 0.000000029802308, z: 0.0000021457677}
+--- !u!114 &5569798243490324736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6824254183045010209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.02
+  enableDynamicScaling: 1
 --- !u!1 &9177265102605442235
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,6 +164,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2217281631858678710}
+  - component: {fileID: 3034600075675817873}
   m_Layer: 7
   m_Name: doors
   m_TagString: Untagged
@@ -176,6 +193,21 @@ Transform:
   - {fileID: 6832986718362814470}
   m_Father: {fileID: 1223214990354766512}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3034600075675817873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9177265102605442235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 145df826fba58894cbaacef95c7d62f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scale: 1.02
+  enableDynamicScaling: 0
 --- !u!1001 &926224616947211393
 PrefabInstance:
   m_ObjectHideFlags: 0

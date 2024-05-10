@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -5516828920797930053}
   - component: {fileID: 2413083628560653462}
   - component: {fileID: 2923170557847167930}
+  - component: {fileID: 7183664483851422428}
   m_Layer: 8
   m_Name: plate
   m_TagString: Untagged
@@ -336,6 +337,21 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &7183664483851422428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8880492880436948564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.01
+  enableDynamicScaling: 0
 --- !u!1 &9151488592641599293
 GameObject:
   m_ObjectHideFlags: 0

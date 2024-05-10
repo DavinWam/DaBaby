@@ -103,8 +103,8 @@ Material:
     - _specularSize: 0.9
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.654902, g: 0.59607846, b: 0.6862745, a: 1}
+    - _Color: {r: 0.83793557, g: 0.6578854, b: 0.9339623, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 0}
     - _Vector3: {r: 8, g: 8, b: 8, a: 0}
-    - _shadowColor: {r: 0.5717619, g: 0.38967004, b: 0.6698113, a: 0}
+    - _shadowColor: {r: 0.71245265, g: 0.58934116, b: 0.7764706, a: 0}
   m_BuildTextureStacks: []

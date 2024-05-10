@@ -6,7 +6,7 @@ public class RecursiveHullObject : MonoBehaviour, IHullObject
     private HullMaterialConfig materialConfig;
     private Material materialCopy;
     public Color outlineColor = new Color(0,0,0,1);
-    public float scale = 1.1f;
+    public float scale = 1.02f;
     public bool enableDynamicScaling = false;
     private List<GameObject> allHullInstances = new List<GameObject>();
 

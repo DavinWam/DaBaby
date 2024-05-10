@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4074189322112822160}
   - component: {fileID: 3487039755111573275}
   - component: {fileID: 36862747335630081}
+  - component: {fileID: 294998567489920940}
   m_Layer: 0
   m_Name: Painting
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 3.5228112, y: 1.6511692, z: -3.367978}
-  m_LocalScale: {x: 0.008892787, y: 0.46908164, z: 0.109775454}
+  m_LocalScale: {x: 0.008127117, y: 0.32471448, z: 0.057595912}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -63,7 +64,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 5042d3e4134641647a64e46d6240cb10, type: 2}
-  - {fileID: 2100000, guid: e147ae3982bdc19489030eaa3e0448a3, type: 2}
+  - {fileID: 2100000, guid: aed256d5e362bb8479bf5a6e7c6d4cd7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -106,3 +107,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.3122497, y: 1.8523232, z: 11.093886}
   m_Center: {x: -0.000007629397, y: 0, z: 0.000009298326}
+--- !u!114 &294998567489920940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820624546991875306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.02
+  enableDynamicScaling: 0

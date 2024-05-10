@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6771677069942349597}
   - component: {fileID: 4598643243287443107}
   - component: {fileID: 8259098694468201148}
+  - component: {fileID: 445214433313417600}
   m_Layer: 0
   m_Name: model
   m_TagString: Untagged
@@ -99,6 +100,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   swapMaterial: {fileID: 2100000, guid: e772901d81e5b414b98c6458c6c01184, type: 2}
   babyAI: {fileID: 0}
+--- !u!114 &445214433313417600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2173296907979307330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.01
+  enableDynamicScaling: 0
 --- !u!1 &9002314084421694952
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,12 +294,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MaterialSwapper, Assembly-CSharp
-        m_MethodName: RevertMaterials
-        m_Mode: 1
+        m_TargetAssemblyTypeName: BabyAI, Assembly-CSharp
+        m_MethodName: babyHas
+        m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

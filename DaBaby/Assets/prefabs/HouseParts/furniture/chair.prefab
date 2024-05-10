@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8833130852193508830}
   - component: {fileID: 1478177276428625110}
   - component: {fileID: 500232080572054541}
+  - component: {fileID: 3971090439698608053}
   m_Layer: 7
   m_Name: chair
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.99552655, z: 0, w: 0.094482}
   m_LocalPosition: {x: 3.686964, y: 0.49806556, z: 0.3778983}
-  m_LocalScale: {x: 0.3937009, y: 0.39370078, z: 0.3937009}
+  m_LocalScale: {x: 0.39370084, y: 0.39370078, z: 0.39370084}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -127,3 +128,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.19, y: 2.5939174, z: 1.1247483}
   m_Center: {x: -0.58, y: 0, z: -0.00000026822096}
+--- !u!114 &3971090439698608053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3164822864014605362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.02
+  enableDynamicScaling: 0

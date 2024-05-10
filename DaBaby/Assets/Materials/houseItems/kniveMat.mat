@@ -95,12 +95,12 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _EdgeDiffuse: 0.02
+    - _EdgeDiffuse: 0.01
     - _EdgeDistanceAttenuation: 1
     - _EdgeRim: 0.7
     - _EdgeRimOffset: 0
     - _EdgeShadowAttenuation: 5
-    - _EdgeSpecular: 0.01
+    - _EdgeSpecular: 0.16
     - _EdgeSpecularOffset: 0.01
     - _Exposure: 1
     - _GlossMapScale: 1
@@ -117,9 +117,9 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _ambientColor: 0.5
+    - _ambientColor: 0.1
     - _rimThreshHold: 0
-    - _smoothness: 1.5
+    - _smoothness: 0.8
     - _specularSize: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

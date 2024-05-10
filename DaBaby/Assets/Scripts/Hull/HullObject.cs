@@ -5,12 +5,12 @@ public class HullObject : MonoBehaviour, IHullObject
     private HullMaterialConfig materialConfig; // No longer public, loaded from Resources
     private Material materialCopy;
     public Color outlineColor = new Color(0,0,0,1);
-    public float scaleMultiplier = 1.1f; // Multiplier for scaling the hull relative to the parent object
+    public float scaleMultiplier = 1.02f; // Multiplier for scaling the hull relative to the parent object
     public bool enableDynamicScaling = false; // Flag to enable/disable dynamic scaling
     private GameObject hullInstance;
     private Vector3 scaleVector; // To store the initial scale of the hull
 
-    void Start()
+    void Awake()
     {
         // Load the ScriptableObject from the Resources/Configurations folder
         materialConfig = Resources.Load<HullMaterialConfig>("Configurations/HullMaterial");

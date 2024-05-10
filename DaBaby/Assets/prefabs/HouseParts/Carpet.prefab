@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 796351878850784455}
   - component: {fileID: 5769808151284390672}
   - component: {fileID: 7263520666686549457}
+  - component: {fileID: 6411741939753252053}
   m_Layer: 7
   m_Name: Carpet
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.174371, y: 0.12277892, z: -4.6442757}
-  m_LocalScale: {x: 0.22345796, y: 0.015278709, z: 0.086051434}
+  m_LocalScale: {x: 0.13300136, y: 0.012026946, z: 0.124644995}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -105,3 +106,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.31221, y: 1.8523229, z: 11.093883}
   m_Center: {x: -0.0000044107437, y: -0.0000009536743, z: 0.00000023841856}
+--- !u!114 &6411741939753252053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3533448358719676350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e27c1619a571a469e51bbdfe762f54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineColor: {r: 0, g: 0, b: 0, a: 1}
+  scaleMultiplier: 1.02
+  enableDynamicScaling: 0
