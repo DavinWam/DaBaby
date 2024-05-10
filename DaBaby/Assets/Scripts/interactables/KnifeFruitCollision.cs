@@ -6,10 +6,10 @@ public class KnifeFruitCollision : MonoBehaviour
 {
    public GameObject choppedFruit;
    public AudioSource chopping;
-
+    public float chopVelocity = .8f;
     private void OnCollisionEnter(Collision collision) 
     {
-        if (collision.gameObject.tag == "Knife")
+        if (collision.gameObject.tag == "Knife" && collision.relativeVelocity.magnitude > chopVelocity)
         {
             Vector3 pos = transform.position;
             float originalX = pos.x, originalZ = pos.z;

@@ -6,7 +6,7 @@ public class SpoonCollision : MonoBehaviour
     public Transform spoonParent; // The parent object to maintain the correct hierarchy and transformations.
     private FoodType  spoonFoodType = FoodType.Empty;
     private GameObject currentFilledSpoon = null;
-
+    public MaterialSwapper ms;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("FoodPiece") && currentFilledSpoon == null)
@@ -28,7 +28,18 @@ public class SpoonCollision : MonoBehaviour
         }
 
     }
-
+    public void ChangeFilledSpoonMat(){
+        if (currentFilledSpoon != null){
+            Renderer renderer = currentFilledSpoon.GetComponent<Renderer>();
+            ms.SwapMaterials(renderer);
+        }
+    }
+    public void ResetFilledSpoonMat(){
+        if (currentFilledSpoon != null){
+            Renderer renderer = currentFilledSpoon.GetComponent<Renderer>();
+            ms.RevertMaterials(renderer);
+        }
+    }
     private void OnCollisionEnter(Collision collision){
         if (collision.gameObject.name.Contains("babyAnimated") && currentFilledSpoon)
         {

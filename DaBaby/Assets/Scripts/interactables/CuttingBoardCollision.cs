@@ -13,7 +13,7 @@ public class CuttingBoardCollision : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         Fruit fruitComponent = collision.gameObject.GetComponent<Fruit>();
-        if (fruitComponent != null && collision.gameObject.CompareTag("Food") && !fruit && rb.velocity.magnitude < 0.01f)
+        if (fruitComponent != null && collision.gameObject.CompareTag("Food") && !fruit && rb.velocity.magnitude < 0.02f)
         {
             fruit = collision.gameObject;
             // Move and re-parent the fruit

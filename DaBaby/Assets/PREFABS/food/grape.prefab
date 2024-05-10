@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3578259799241525679}
   - component: {fileID: 8475847414433541721}
   - component: {fileID: 8549710411096020056}
-  - component: {fileID: 7355274266328190916}
   - component: {fileID: 9209177682164195193}
   - component: {fileID: 5757313156760931143}
   - component: {fileID: 6814451386694860270}
+  - component: {fileID: 9082980573151338881}
   m_Layer: 0
   m_Name: grape
   m_TagString: FoodPiece
@@ -87,27 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &7355274266328190916
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6743002930372199921}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &9209177682164195193
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -298,3 +277,24 @@ MonoBehaviour:
   maxInteractions: 1
   filledSpoonPrefab: {fileID: 917334592490879892, guid: dbc649fe15ee7e5448bbfceb779cf988, type: 3}
   foodType: 1
+--- !u!65 &9082980573151338881
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6743002930372199921}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

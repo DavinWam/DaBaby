@@ -127,6 +127,7 @@ public class BabyAI : MonoBehaviour
                 break;
         }
     }
+    public FoodImageChanger foodImageChanger;
         void ChangeState(BabyState newState, Transform target = null)
     {
         // Cancel any repeating invocations when changing states to avoid overlap of behaviors
@@ -170,6 +171,8 @@ public class BabyAI : MonoBehaviour
                 break;
             case BabyState.Hungry:
                 currentAnimation = GetComponent<BabyAnimationController>().SwitchAnimation(2);
+                //update want icon
+                foodImageChanger.ChangeFoodImage(wantedFood);
                 break;
         }
     }
@@ -182,7 +185,7 @@ public class BabyAI : MonoBehaviour
             if (idleCheckCooldown <= 0)
             {
                 LookForObjectsOfInterest();
-               // idleCheckCooldown = 5f / (status.energy / 100);  // Reset cooldown
+                idleCheckCooldown = 5f; // / (status.energy / 100);  // Reset cooldown
             }
         }
 
@@ -332,11 +335,14 @@ public class BabyAI : MonoBehaviour
             if(spoonFood == wantedFood){
                 GetComponent<BabyAnimationController>().SwitchAnimation(7);
                 status.hunger += 30;
-                ChangeState(BabyState.Satiated);
+                //ChangeState(BabyState.Satiated);
+                foodImageChanger.HideFoodImage();
+                StartCoroutine(WaitAndChangeState(BabyState.Satiated, 8f));
             }else{
                 GetComponent<BabyAnimationController>().SwitchAnimation(2);
                 status.hunger += 15;
-                ChangeState(BabyState.Idle);
+                foodImageChanger.HideFoodImage();
+                StartCoroutine(WaitAndChangeState(BabyState.Idle, 8f));
             }
             return true;
         }else{
@@ -344,6 +350,12 @@ public class BabyAI : MonoBehaviour
         }
 
     }
+    IEnumerator WaitAndChangeState(BabyState newState, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        ChangeState(newState);
+    }
+
     void HandleShowingNeeds()
     {
         if (!agent.isStopped)
@@ -608,7 +620,7 @@ public class BabyAI : MonoBehaviour
 
     IEnumerator EndSatiated()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(10f);
         status.shouldDecay = true; // Resume status decay
         status.energy += 30;
         ChangeState(BabyState.Idle); // Return to Idle state
