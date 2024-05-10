@@ -10,9 +10,9 @@ public class BabyStatus : ScriptableObject
 
     public float overallStatus = 100f;  // New overall status field
 
-    public float hungerDecayRate = 0.01f;
-    public float happinessDecayRate = 0.01f;
-    public float energyDecayRate = 0.01f;
+    public float hungerDecayRate = 0.035f;
+    public float happinessDecayRate = 0.025f;
+    public float energyDecayRate = 0.035f;
 
     public bool shouldDecay = true;
 

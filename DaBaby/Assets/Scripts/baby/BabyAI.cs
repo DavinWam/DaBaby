@@ -160,7 +160,7 @@ public class BabyAI : MonoBehaviour
         {
             timeHeld += Time.deltaTime;
             status.shouldDecay = false;
-            Debug.Log(timeHeld);
+            //  Debug.Log(timeHeld);
         }
         if (timeHeld > 10f)
         {
@@ -216,7 +216,7 @@ public class BabyAI : MonoBehaviour
         CancelInvoke();
         GetComponent<CapsuleCollider>().height = .6f;
         isSeated = false;
-        
+
         isTalking = false;
         currentState = BabyState.None;
 
@@ -266,8 +266,8 @@ public class BabyAI : MonoBehaviour
         }
         else if (newState == BabyState.ShowingNeeds)
         {
-            audioSource.clip =  cryClips[2];
-            
+            audioSource.clip = cryClips[2];
+
             audioSource.Play();
             Debug.Log("Needs: " + targetObject.name + " brought over.");
             currentAnimation = GetComponent<BabyAnimationController>().SwitchAnimation(2);
@@ -296,7 +296,7 @@ public class BabyAI : MonoBehaviour
         }
         else if (newState == BabyState.Lonely)
         {
-            audioSource.clip =  cryClips[1];
+            audioSource.clip = cryClips[1];
             audioSource.loop = true;
             audioSource.Play();
             currentAnimation = GetComponent<BabyAnimationController>().SwitchAnimation(4);
@@ -330,7 +330,7 @@ public class BabyAI : MonoBehaviour
                 {
                     ForceRelease();
                 }
-                status.love += 12;
+                status.love += 15;
                 agent.isStopped = true;  // Stop the baby from moving
                 break;
             case BabyState.Hurt:
@@ -409,59 +409,51 @@ public class BabyAI : MonoBehaviour
     {
         // Define total weight for normalization
         float totalWeight = status.hunger + status.love + (100 - status.energy) + status.happiness;
-        float hungerWeight = (100 - status.energy / 2) / totalWeight;
+        float hungerWeight = (100 - status.energy / 2f) / totalWeight;
         float loveWeight = status.love / totalWeight;
         float energyWeight = (100 - status.energy) / totalWeight;
         float happinessWeight = status.happiness / totalWeight;
 
         // Compute the probabilities for each need category
-        float foodProbability = hungerWeight;
-        float attentionProbability = loveWeight;
-        float activityProbability = (happinessWeight + energyWeight) / 3; // Adjusting for energy and happiness
-
         // Get a random value between 0 and 1
+        float foodRandomValue = Random.value;
+        float foodProbability = hungerWeight + (.2f * foodRandomValue);
+        float attentionRandomValue = Random.value;
+        float attentionProbability = loveWeight + (.2f * attentionRandomValue);
+        float activityRandomValue = Random.value;
+        float activityProbability = ((happinessWeight + energyWeight) / 2f) + (.2f * activityRandomValue); // Adjusting for energy and happiness
+
+        // Determine the total sum of probabilities
+        float sum = foodProbability + attentionProbability + activityProbability;
+
+        // Normalize probabilities
+        foodProbability /= sum;
+        attentionProbability /= sum;
+        activityProbability /= sum;
+
+        // Print probabilities for debugging purposes
+        Debug.Log("Food Probability: " + foodProbability);
+        Debug.Log("Attention Probability: " + attentionProbability);
+        Debug.Log("Activity Probability: " + activityProbability);
+
+        // Generate a random value between 0 and 1
         float randomValue = Random.value;
 
-        NeedCategory need;
-
-        // Determine the need category based on weighted probabilities
+        // Determine the need category based on the random value
         if (randomValue < foodProbability)
         {
-            need = NeedCategory.Food;
+            return NeedCategory.Food;
         }
-        else if (randomValue < attentionProbability)
+        else if (randomValue < foodProbability + attentionProbability)
         {
-            need = NeedCategory.Attention;
-        }
-        else if (randomValue < activityProbability)
-        {
-            need = NeedCategory.Activity;
+            return NeedCategory.Attention;
         }
         else
         {
-            // Select the need category with the highest probability
-            float maxProbability = Mathf.Max(foodProbability, attentionProbability, activityProbability);
-            if (maxProbability == foodProbability)
-            {
-                need = NeedCategory.Food;
-            }
-            else if (maxProbability == attentionProbability)
-            {
-                need = NeedCategory.Attention;
-            }
-            else
-            {
-                need = NeedCategory.Activity;
-            }
+            return NeedCategory.Activity;
         }
-        float sum = foodProbability + attentionProbability + activityProbability;
-        // Print probabilities for debugging purposes
-        Debug.Log("Food Probability: " + foodProbability/sum);
-        Debug.Log("Attention Probability: " + attentionProbability/sum);
-        Debug.Log("Activity Probability: " + activityProbability/sum);
-
-        return need;
     }
+
 
 
     // Check if the collider is a valid target for the current need
@@ -491,7 +483,7 @@ public class BabyAI : MonoBehaviour
             {
                 Debug.Log("done idling");
                 LookForObjectsOfInterest();
-                idleCheckCooldown = 8f/ ((200 - status.energy) / 100);  // Reset cooldown
+                idleCheckCooldown = 5f / ((200 - status.energy) / 100);  // Reset cooldown
             }
         }
 
@@ -614,7 +606,7 @@ public class BabyAI : MonoBehaviour
                         // Object is within reach and is grabbable, attach it to an available hand
                         AttachToHand(targetObject);
                         imageChanger.HideImage();
-                        audioSource.clip =  laughClips[2];
+                        audioSource.clip = laughClips[2];
                         audioSource.Play();
                         StartCoroutine(ChangeState(BabyState.Satiated));
                         timeSpentTryingToReach = 0f;  // Resets the timer used to track the duration of reaching attempts
@@ -625,7 +617,7 @@ public class BabyAI : MonoBehaviour
                         // Object is within reach but not in the grabbable layer, inspect then go to targetless roaming
                         InspectObject();  // A method to inspect the object
                         imageChanger.HideImage();
-                        audioSource.clip =  laughClips[2];
+                        audioSource.clip = laughClips[2];
                         audioSource.Play();
                         StartCoroutine(ChangeState(BabyState.Satiated));
                         timeSpentTryingToReach = 0f;  // Resets the timer used to track the duration of reaching attempts
@@ -791,7 +783,7 @@ public class BabyAI : MonoBehaviour
         if (idleCheckCooldown <= 0)
         {
             LookForObjectsOfInterest();
-            idleCheckCooldown = 12f / ((200 - status.energy) / 100);  // Reset cooldown based on energy
+            idleCheckCooldown = 8f / ((200 - status.energy) / 100);  // Reset cooldown based on energy
         }
     }
     void RandomMovement()
@@ -816,7 +808,7 @@ public class BabyAI : MonoBehaviour
             if (spoonFood == wantedFood)
             {
                 GetComponent<BabyAnimationController>().SwitchAnimation(6);
-                status.hunger += 30;
+                status.hunger += 20;
                 imageChanger.HideImage();
                 audioSource.loop = false;
                 audioSource.clip = laughClips[0];
@@ -826,14 +818,14 @@ public class BabyAI : MonoBehaviour
             else
             {
                 GetComponent<BabyAnimationController>().SwitchAnimation(2);
-                status.hunger += 15;
+                status.hunger += 10;
                 imageChanger.HideImage();
                 audioSource.loop = false;
                 audioSource.clip = talkClips[3];
                 audioSource.Play();
                 StartCoroutine(WaitAndChangeState(BabyState.Idle, 5f));
-            }            
-            
+            }
+
             return true;
         }
         else
@@ -851,7 +843,7 @@ public class BabyAI : MonoBehaviour
         {
             Debug.Log("Correct object brought close. Now Satiated.");
             status.happiness += 20;
-            audioSource.clip =  laughClips[2];
+            audioSource.clip = laughClips[2];
             audioSource.loop = false;
             audioSource.Play();
             StartCoroutine(ChangeState(BabyState.Satiated));  // Change state to Satiated
@@ -886,9 +878,9 @@ public class BabyAI : MonoBehaviour
 
     IEnumerator EndSatiated()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(2f);
         status.shouldDecay = true; // Resume status decay
-        status.energy += 15;
+        status.energy += 25;
         audioSource.loop = false;
         yield return StartCoroutine(ChangeState(BabyState.TargetlessRoaming)); // Return to Idle state
     }
@@ -900,7 +892,7 @@ public class BabyAI : MonoBehaviour
     public float intervalMax = 10f;
     public bool isTalking = false;
     private AudioSource audioSource;
-    
+
     IEnumerator PlayAudioPeriodically()
     {
         while (isTalking)

@@ -20,7 +20,7 @@ public class GameEnd : MonoBehaviour
         {
             curTime += Time.deltaTime; //normal 1 second time passage
 
-            if (intervalCnt == 6) //after 6 30 sec intervals
+            if (intervalCnt == 8) //after 6 30 sec intervals
             {
                 EndGame();
             }
@@ -45,7 +45,7 @@ public class GameEnd : MonoBehaviour
                 finalScore += statusList[i];
             }
 
-            if (finalScore >= 10)
+            if (finalScore >= 65)
             {
                 SceneManager.LoadScene("GameEndWin");
                 //code for you win screen

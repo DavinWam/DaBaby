@@ -54,6 +54,7 @@ public class EggCooking : MonoBehaviour
     {
         if (collision.gameObject.tag == "Pan")
         {
+            gameObject.transform.parent = collision.transform;
             isOnPan = true;
             if( collision.gameObject.GetComponent<PanCooking>()){
                 pan = collision.gameObject.GetComponent<PanCooking>();
