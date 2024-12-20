@@ -106,5 +106,5 @@ Material:
     - _Color: {r: 0.43529412, g: 0.43529412, b: 0.43529412, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 0}
     - _Vector3: {r: 8, g: 8, b: 8, a: 0}
-    - _shadowColor: {r: 0, g: 0, b: 0, a: 0}
+    - _shadowColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 0}
   m_BuildTextureStacks: []
